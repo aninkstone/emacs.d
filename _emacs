@@ -54,9 +54,14 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-desert")
 (require 'color-theme-desert)
+(color-theme-desert)
 
 ;;cedet
 (require 'cedet)
+(require 'ede)
+
+(add-to-list 'load-path "~/.emacs.d")
+(require 'bs)
 
 ;; Use the "electric-buffer-list" instead of "buffer-list"
 ;; so that the cursor automatically switches to the other window
@@ -100,7 +105,11 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader-master/")
 (require 'evil-leader)
-(evil-leader/set-key "be" 'recentf-open-files)
+;;(evil-leader/set-key "be" 'recentf-open-files)
+(evil-leader/set-key "be" 'bs-show)
+
+(add-to-list 'load-path "~/.emacs.d")
+(require 'undo-tree)
 
 ;; enable hightlight-symbol
 (add-to-list 'load-path "~/.emacs.d/highlight-symbol")
@@ -112,3 +121,20 @@
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-replace-state-map (kbd "C-u") 'evil-scroll-page-up)
+
+;;; BS-menu
+(eval-after-load 'bs
+  ;;'(progn
+     ;;disable default bs key bindings
+     ;;(define-key bs-mode-map "k" nil)
+     ;;)
+  '(progn
+     ;; use the standard bs bindings as a base
+     (evil-make-overriding-map bs-mode-map 'normal t)
+     (evil-define-key 'motion bs-mode-map "h" 'evil-backward-char)
+     (evil-define-key 'motion bs-mode-map "j" 'bs-down)
+     (evil-define-key 'motion bs-mode-map "k" 'bs-up)
+     (evil-define-key 'motion bs-mode-map "l" 'evil-forward-char)
+     )
+  )
+;;(setq evil-emacs-state-cursor '("red" box))
