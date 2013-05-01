@@ -1,16 +1,16 @@
-﻿;;;; this is the emacs config file
+;;;; this is the emacs config file
 
 ;; enable autocomplete
-(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
 (require 'auto-complete)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete-1.3.1/dict")
+(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (require 'auto-complete-config)
 (ac-config-default)
 
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 1024)
-;;(global-set-key "F4" 'recentf-open-files)
 
 ;;config for eshell.
 (defun eshell-clear ()
@@ -20,7 +20,7 @@
     (erase-buffer)))
 (defalias 'openo 'find-file-other-window)
 
-;;shell,gdb退出后，自动关闭该buffer
+;;auto close buffer when shell/gdb exited
 (add-hook 'shell-mode-hook 'mode-hook-func)
 (add-hook 'gdb-mode-hook 'mode-hook-func)
 (defun mode-hook-func  () (set-process-sentinel (get-buffer-process (current-buffer)) #'kill-buffer-on-exit))
@@ -45,8 +45,22 @@
 (define-key global-map "\C-\\i" 'cscope-find-files-including-file)
 (define-key global-map "\C-\\d" 'cscope-find-called-functions)
 ;;
+;;cedet mode
+(require 'cedet)
+(require 'ede)
+;;bs mode
+(require 'bs)
+;;semantic-mode
+(setq semantic-default-submodes '(global-semantic-idle-scheduler-mode
+                                  global-semanticdb-minor-mode
+                                  global-semantic-idle-summary-mode
+                                  global-semantic-mru-bookmark-mode))
+
+;;(semantic-mode t)
 (define-key global-map "\C-]" 'semantic-symref)
 
+
+;;shell mode
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
@@ -56,18 +70,7 @@
 (require 'color-theme-desert)
 (color-theme-desert)
 
-;;cedet
-(require 'cedet)
-(require 'ede)
-
 (add-to-list 'load-path "~/.emacs.d")
-(require 'bs)
-
-;; Use the "electric-buffer-list" instead of "buffer-list"
-;; so that the cursor automatically switches to the other window
-(setq time-stamp-active t)
-(setq time-stamp-warn-inactive t)
-(setq time-stamp-format "%:y-%02m-%02d %3a %02H:%02M:%02S chunyu")	;; 设置时间戳，标识出最后一次保存文件的时间。
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -75,10 +78,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(global-font-lock-mode t nil (font-lock))
- '(global-auto-revert-mode t)	            ;; Automatically reload files after they've been modified (typically in Visual C++)
+ '(global-auto-revert-mode t)	                                          ;; Automatically reload files after they've been modified (typically in Visual C++)
  '(case-fold-search t)
  '(color-theme-desert nil)
- '(message "custome-set-variables done")
  '(mouse-avoidance-mode (quote animate) nil (avoid))
  '(quote (display-time-mode 1))
  '(scroll-bar-mode nil)
@@ -86,17 +88,24 @@
  '(set-keyboard-coding-system (quote gb2312))
  '(set-language-environment (quote Chinese-GB))
  '(set-terminal-coding-system (quote utf-8))
- '(setq make-backup-files nil)
  '(show-paren-mode t nil (paren))
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
+ '(setq-default indent-tabs-mode nil)                                     ;;replace tab with space
+ '(setq-default tab-width 4)
+ '(setq indent-line-function 'insert-tab)
+ '(setq time-stamp-active t)
+ '(setq time-stamp-warn-inactive t)
+ ;;'(setq time-stamp-format "%:y-%02m-%02d %3a %02H:%02M:%02S")	  ;; show file time scamp 
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+ '(setq make-backup-files nil))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+  (set-default-font "Courier New-18")
  )
 
 (add-to-list 'load-path "~/.emacs.d/evil") ;
@@ -105,22 +114,18 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader-master/")
 (require 'evil-leader)
-;;(evil-leader/set-key "be" 'recentf-open-files)
 (evil-leader/set-key "be" 'bs-show)
 
-(add-to-list 'load-path "~/.emacs.d")
-(require 'undo-tree)
+(define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
+(define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
+(define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)
+(define-key evil-replace-state-map (kbd "C-u") 'evil-scroll-page-up)
 
 ;; enable hightlight-symbol
 (add-to-list 'load-path "~/.emacs.d/highlight-symbol")
 (require 'highlight-symbol)
 (evil-leader/set-key "m" 'highlight-symbol-at-point)
 (evil-leader/set-key "n" 'highlight-symbol-remove-all)
-
-(define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
-(define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
-(define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)
-(define-key evil-replace-state-map (kbd "C-u") 'evil-scroll-page-up)
 
 ;;; BS-menu
 (eval-after-load 'bs
@@ -138,3 +143,35 @@
      )
   )
 ;;(setq evil-emacs-state-cursor '("red" box))
+
+(add-to-list 'load-path "~/.emacs.d")
+(require 'undo-tree)
+
+;;jabber
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
+(require 'jabber)
+
+(setq jabber-account-list
+  '(("thatways.c@gmail.com" 
+    (:network-server . "talk.google.com")
+    (:connection-type . ssl)))
+  )
+
+;;magit
+(add-to-list 'load-path "~/.emacs.d/magit-1.2.0")
+(require 'magit)
+
+
+;; Googel appengine mode
+(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
+
+(setq appengine-java-sdk-path "/Volumes/E/development/web/")
+(setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
+(setq appengine-java-root-path (concat appengine-java-sdk-path "appengine-java-sdk-1.7.5"))
+
+(require 'appengine-java-mode)
+(add-hook 'appengine-java-mode-hook
+          (lambda ()
+	    (local-set-key "\C-cc" 'appengin-java-start-appserver)
+	    (local-set-key "\C-cb" 'appengine-browse-appserver)
+	    (local-set-key "\C-cu" 'appengine-java-update-appserver)))
