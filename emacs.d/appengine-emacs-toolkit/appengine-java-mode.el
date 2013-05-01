@@ -67,11 +67,11 @@
   (setq appengine-project-name (concat appengine-java-project-path "/"))
   (setq appengine-project-name (concat appengine-project-name "war"))
   (shell appengine-shell-buffer-name)
-  (message (concat appengine-java-root-path"/bin/dev_appserver.sh --port="port" "appengine-project-name"\n"))
+
   ;; start server
   (comint-send-string (current-buffer) (concat "echo '[appengine-java] AppServer Starting "appengine-project-name" ...' \n"))
   (if (eq system-type 'windows-nt)
-      (comint-send-string (current-buffer)(concat appengine-java-root-path"/bin/dev_appserver.cmd --port="port" "appengine-project-name"\n")))
+      (comint-send-string (current-buffer)(concat appengine-java-root-path"/bin/dev_appserver.cmd --port="port" "appengine-project-name"\n"))
     (comint-send-string (current-buffer)(concat appengine-java-root-path"/bin/dev_appserver.sh --port="port" "appengine-project-name"\n")))
 
   (end-of-buffer)
