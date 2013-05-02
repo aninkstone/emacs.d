@@ -1,7 +1,7 @@
 ;;;; this is the emacs config file
 
 ;; enable autocomplete
-(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
 (require 'auto-complete)
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
@@ -165,8 +165,8 @@
   )
 
 ;;magit
-(add-to-list 'load-path "~/.emacs.d/magit-1.2.0")
-(require 'magit)
+;;(add-to-list 'load-path "~/.emacs.d/magit-1.2.0")
+;;(require 'magit)
 
 
 ;; Googel appengine mode
