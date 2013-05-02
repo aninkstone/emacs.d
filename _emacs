@@ -23,6 +23,8 @@
 ;;auto close buffer when shell/gdb exited
 (add-hook 'shell-mode-hook 'mode-hook-func)
 (add-hook 'gdb-mode-hook 'mode-hook-func)
+(add-hook 'term-exec-hook 'mode-hook-func)
+
 (defun mode-hook-func  () (set-process-sentinel (get-buffer-process (current-buffer)) #'kill-buffer-on-exit))
 (defun kill-buffer-on-exit (process state)
   (message "%s" state)
@@ -46,8 +48,7 @@
 (define-key global-map "\C-\\d" 'cscope-find-called-functions)
 ;;
 ;;cedet mode
-(require 'cedet)
-(require 'ede)
+(require 'cedet) (require 'ede)
 ;;bs mode
 (require 'bs)
 ;;semantic-mode
@@ -146,6 +147,12 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'undo-tree)
+
+;;smooth scroll
+(add-to-list 'load-path "~/.emacs.d/smooth-scroll")
+(require 'smooth-scroll)
+(require 'smooth-scrolling)
+;;(setq scroll-conservatively 10000)    ;;text to scroll one line at a time when you move the cursor past the top or bottom of the window
 
 ;;jabber
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
