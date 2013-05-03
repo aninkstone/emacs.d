@@ -62,7 +62,7 @@
             (semantic-mrub-switch-tags first))))
 
 ;; enable autocomplete
-(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
 (require 'auto-complete)
 
 (add-to-list 'load-path "~/.emacs.d/")
@@ -153,6 +153,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+  (set-default-font "Courier New-18")
  )
 ;;(setq evil-emacs-state-cursor '("red" box))
 
@@ -166,7 +167,7 @@
 ;;(setq scroll-conservatively 10000)    ;;text to scroll one line at a time when you move the cursor past the top or bottom of the window
 
 ;;jabber
-;;(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
 (require 'jabber)
 
 ;;(setq jabber-account-list
@@ -187,7 +188,7 @@
 ;;(require 'magit)
 
 ;; Googel appengine mode
-(add-to-list 'load-path "~/net.gits/emacs.d/emacs.d/appengine-emacs-toolkit")
+(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
 
 (setq appengine-java-sdk-path "/Volumes/E/development/web/")
 (setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
