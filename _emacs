@@ -7,7 +7,7 @@
 ;;evil setting
 (add-to-list 'load-path "~/.emacs.d/evil") ;
 (require 'evil)
-(evil-mode 1)
+(evil-mode t)
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader-master/")
 (require 'evil-leader)
@@ -81,6 +81,11 @@
 (add-hook 'gdb-mode-hook 'mode-hook-func)
 (add-hook 'term-exec-hook 'mode-hook-func)
 
+;;disable evil for eshell
+;;(add-hook 'shell-mode-hook '(lambda () (evil-mode -1)))
+;;(add-hook 'gdb-mode-hook '(lambda () (evil-mode -1)))
+;;(add-hook 'term-exec-hook '(lambda () (evil-mode -1)))
+
 (defun mode-hook-func  ()
   (set-process-sentinel (get-buffer-process (current-buffer)) #'kill-buffer-on-exit))
 
@@ -90,6 +95,10 @@
       (string-match "exited abnormally with code.*" state)
       (string-match "finished" state))
       (kill-buffer (current-buffer))))
+
+;;shell mode
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;;cscope setup
 (add-to-list 'load-path "~/.emacs.d")
@@ -105,11 +114,6 @@
 (define-key global-map "\C-\\i" 'cscope-find-files-including-file)
 (define-key global-map "\C-\\d" 'cscope-find-called-functions)
 
-
-;;shell mode
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
 ;;color theme setting
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-desert")
@@ -118,8 +122,13 @@
 ;;smooth scroll
 (add-to-list 'load-path "~/.emacs.d/smooth-scroll")
 (require 'smooth-scroll)
+;;(smooth-scroll-mode t)
 (require 'smooth-scrolling)
+(setq smooth-scroll-margin 2)
 ;;(setq scroll-conservatively 10000)    ;;text to scroll one line at a time when you move the cursor past the top or bottom of the window
+
+(add-to-list 'load-path "~/.emacs.d")
+(require 'goto-last-change)
 
 ;;jabber
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
@@ -161,7 +170,7 @@
   ;;default variable setup
   ;;this function will call at end of this file
   (setq make-backup-files nil)
-  (setq-default tab-width nil)
+  ;;(setq-default tab-width nil)
   (global-auto-revert-mode nil)
   (color-theme-desert)
   )
