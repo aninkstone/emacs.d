@@ -8,6 +8,8 @@
 (add-to-list 'load-path "~/.emacs.d/evil-leader-master/")
 (require 'evil-leader)
 (evil-leader/set-key "be" 'bs-show)
+(evil-leader/set-key "gs" 'magit-status)
+(evil-leader/set-key "gl" 'magit-log)
 
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
@@ -120,7 +122,6 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-desert")
 (require 'color-theme-desert)
-(color-theme-desert)
 
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -130,22 +131,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(case-fold-search t)
- '(color-theme-desert nil)
- '(ede-project-directories (quote ("/home/daniel/ngi" "/mnt/fat32/development")))
- '(global-auto-revert-mode t)
- '(global-font-lock-mode t nil (font-lock))
  '(mouse-avoidance-mode (quote animate) nil (avoid))
  '(quote (display-time-mode 1))
- '(scroll-bar-mode nil)
- '(set-buffer-file-coding-system (quote gb2312))
- '(set-keyboard-coding-system (quote gb2312))
- '(set-language-environment (quote Chinese-GB))
- '(set-terminal-coding-system (quote utf-8))
- '(setq make-backup-files t)
- '(setq-default tab-width t)
  '(show-paren-mode t nil (paren))
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
- '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
  
 (custom-set-faces
@@ -153,9 +142,32 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-  (set-default-font "Courier New-18")
  )
 ;;(setq evil-emacs-state-cursor '("red" box))
+
+(defun emacs-default-setting ()
+  ;;this function is for personal emacs default setup
+  ;;this function will be called at end of this file
+ (set-buffer-file-coding-system (quote gb2312))
+ (set-keyboard-coding-system (quote gb2312))
+ (set-language-environment (quote Chinese-GB))
+ (set-terminal-coding-system (quote utf-8))
+ (setq make-backup-files nil)
+ (setq-default tab-width nil)                ;;to stop Emacs from entering the tab character into your files
+ (setq-default indent-tabs-mode nil) 
+ (setq standard-intent 4)                    ;;to set the standard indent size to some value other than default
+ (scroll-bar-mode nil)
+ (global-auto-revert-mode t)
+ (global-font-lock-mode t nil (font-lock))
+ (tool-bar-mode nil)
+ (set-default-font "Courier New-18")
+ (global-hl-line-mode t)
+ (setq scroll-step 1)                        ;;to make Emacs highlight the line the curosr is currently on
+ (mouse-wheel-mode t)                        ;;enable mouse wheel
+ (line-number-mode t)                        ;;enable line number
+ (column-number-mode t)                      ;;show column-number in the mode line
+ ;;(setq default-major-mode 'text-mode)        ;;specify that new buffers should be treated as text files 
+ (color-theme-desert))
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'undo-tree)
@@ -175,29 +187,41 @@
 ;;    (:network-server . "talk.google.com")
 ;;    (:connection-type . ssl)))
 ;;  )
+
 (setq jabber-account-list
   '(("thatway.c@gmail.com" 
     (:network-server . "talk.google.com")
-    (:connection-type . ssl))
+    (:connection-type . ssl)
+    (:port . 443))
     ("thatways.c@gmail.com" 
     (:network-server . "talk.google.com")
-    (:connection-type . ssl))))
+    (:connection-type . ssl)
+    (:port . 443))
+    )
+  )
 
 ;;magit
-;;(add-to-list 'load-path "~/.emacs.d/magit-1.2.0")
-;;(require 'magit)
+(add-to-list 'load-path "~/.emacs.d/magit")
+(require 'magit)
 
 ;; Googel appengine mode
-(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
+;;(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
 
-(setq appengine-java-sdk-path "/Volumes/E/development/web/")
-(setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
-(setq appengine-java-root-path (concat appengine-java-sdk-path "appengine-java-sdk-1.7.5"))
+;;(setq appengine-java-sdk-path "/Volumes/E/development/web/")
+;;(setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
+;;(setq appengine-java-root-path (concat appengine-java-sdk-path "appengine-java-sdk-1.7.5"))
+;;
+;;(require 'appengine-java-mode)
+;;(add-hook 'appengine-java-mode-hook
+;;          (lambda ()
+;;	    (local-set-key "\C-cc" 'appengin-java-start-appserver)
+;;	    (local-set-key "\C-cb" 'appengine-browse-appserver)
+;;	    (local-set-key "\C-cu" 'appengine-java-update-appserver)))
+;;(put 'dired-find-alternate-file 'disabled nil)
 
-(require 'appengine-java-mode)
-(add-hook 'appengine-java-mode-hook
-          (lambda ()
-	    (local-set-key "\C-cc" 'appengin-java-start-appserver)
-	    (local-set-key "\C-cb" 'appengine-browse-appserver)
-	    (local-set-key "\C-cu" 'appengine-java-update-appserver)))
-(put 'dired-find-alternate-file 'disabled nil)
+;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+;;                         ("marmalade" . "http://marmalade-repo.org/packages/")
+;;                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+;;
+;;(add-to-list 'load-path "~/.emacs.d/package")
+;;(require 'package)
