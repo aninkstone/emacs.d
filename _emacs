@@ -1,5 +1,9 @@
 ;;;; this is the emacs config file
 
+;;undo
+(add-to-list 'load-path "~/.emacs.d")
+(require 'undo-tree)
+
 ;;evil setting
 (add-to-list 'load-path "~/.emacs.d/evil") ;
 (require 'evil)
@@ -10,6 +14,7 @@
 (evil-leader/set-key "be" 'bs-show)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
+(evil-leader/set-key "\\" 'execute-extended-command)
 
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
@@ -49,19 +54,6 @@
 (semantic-mode t)
 (define-key evil-normal-state-map "\C-]" 'semantic-symref)
 (define-key evil-normal-state-map "\C-[" 'semantic-ia-fast-jump)
-
-(define-key evil-normal-state-map [(f11)]
-    (lambda ()
-        (interactive)
-        (if (ring-empty-p (oref semantic-mru-bookmark-ring ring))
-                (error "Semantic Bookmark ring is currently empty"))
-        (let* ((ring (oref semantic-mru-bookmark-ring ring))
-               (alist (semantic-mrub-ring-to-assoc-list ring))
-               (first (cdr (car alist))))
-            (if (semantic-equivalent-tag-p (oref first tag)
-                                           (semantic-current-tag))
-                    (setq first (cdr (car (cdr alist)))))
-            (semantic-mrub-switch-tags first))))
 
 ;; enable autocomplete
 (add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
@@ -112,7 +104,7 @@
 (define-key global-map "\C-\\f" 'cscope-find-this-file)
 (define-key global-map "\C-\\i" 'cscope-find-files-including-file)
 (define-key global-map "\C-\\d" 'cscope-find-called-functions)
-;;
+
 
 ;;shell mode
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
@@ -122,55 +114,6 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-desert")
 (require 'color-theme-desert)
-
-(add-to-list 'load-path "~/.emacs.d")
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(case-fold-search t)
- '(mouse-avoidance-mode (quote animate) nil (avoid))
- '(quote (display-time-mode 1))
- '(show-paren-mode t nil (paren))
- '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
- 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-;;(setq evil-emacs-state-cursor '("red" box))
-
-(defun emacs-default-setting ()
-  ;;this function is for personal emacs default setup
-  ;;this function will be called at end of this file
- (set-buffer-file-coding-system (quote gb2312))
- (set-keyboard-coding-system (quote gb2312))
- (set-language-environment (quote Chinese-GB))
- (set-terminal-coding-system (quote utf-8))
- (setq make-backup-files nil)
- (setq-default tab-width nil)                ;;to stop Emacs from entering the tab character into your files
- (setq-default indent-tabs-mode nil) 
- (setq standard-intent 4)                    ;;to set the standard indent size to some value other than default
- (scroll-bar-mode nil)
- (global-auto-revert-mode t)
- (global-font-lock-mode t nil (font-lock))
- (tool-bar-mode nil)
- (set-default-font "Courier New-18")
- (global-hl-line-mode t)
- (setq scroll-step 1)                        ;;to make Emacs highlight the line the curosr is currently on
- (mouse-wheel-mode t)                        ;;enable mouse wheel
- (line-number-mode t)                        ;;enable line number
- (column-number-mode t)                      ;;show column-number in the mode line
- ;;(setq default-major-mode 'text-mode)        ;;specify that new buffers should be treated as text files 
- (color-theme-desert))
-
-(add-to-list 'load-path "~/.emacs.d")
-(require 'undo-tree)
 
 ;;smooth scroll
 (add-to-list 'load-path "~/.emacs.d/smooth-scroll")
@@ -187,41 +130,67 @@
 ;;    (:network-server . "talk.google.com")
 ;;    (:connection-type . ssl)))
 ;;  )
-
 (setq jabber-account-list
   '(("thatway.c@gmail.com" 
     (:network-server . "talk.google.com")
-    (:connection-type . ssl)
-    (:port . 443))
+    (:connection-type . ssl))
     ("thatways.c@gmail.com" 
     (:network-server . "talk.google.com")
-    (:connection-type . ssl)
-    (:port . 443))
-    )
-  )
+    (:connection-type . ssl))))
 
 ;;magit
 (add-to-list 'load-path "~/.emacs.d/magit")
 (require 'magit)
 
 ;; Googel appengine mode
-;;(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
+(add-to-list 'load-path "~/.emacs.d/appengine-emacs-toolkit")
 
-;;(setq appengine-java-sdk-path "/Volumes/E/development/web/")
-;;(setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
-;;(setq appengine-java-root-path (concat appengine-java-sdk-path "appengine-java-sdk-1.7.5"))
-;;
-;;(require 'appengine-java-mode)
-;;(add-hook 'appengine-java-mode-hook
-;;          (lambda ()
-;;	    (local-set-key "\C-cc" 'appengin-java-start-appserver)
-;;	    (local-set-key "\C-cb" 'appengine-browse-appserver)
-;;	    (local-set-key "\C-cu" 'appengine-java-update-appserver)))
-;;(put 'dired-find-alternate-file 'disabled nil)
+(setq appengine-java-sdk-path "/Volumes/E/development/web/")
+(setq appengine-emasc-toolkit-path "~/.emacs.d/appengine-emacs-toolkit")
+(setq appengine-java-root-path (concat appengine-java-sdk-path "appengine-java-sdk-1.7.5"))
 
-;;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                         ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-;;
-;;(add-to-list 'load-path "~/.emacs.d/package")
-;;(require 'package)
+(require 'appengine-java-mode)
+(add-hook 'appengine-java-mode-hook
+          (lambda ()
+	    (local-set-key "\C-cc" 'appengin-java-start-appserver)
+	    (local-set-key "\C-cb" 'appengine-browse-appserver)
+	    (local-set-key "\C-cu" 'appengine-java-update-appserver)))
+(put 'dired-find-alternate-file 'disabled nil)
+
+(defun default-emacs-setting ()
+  ;;default variable setup
+  ;;this function will call at end of this file
+  (setq make-backup-files nil)
+  (setq-default tab-width nil)
+  (global-auto-revert-mode nil)
+  (color-theme-desert)
+  )
+ 
+(default-emacs-setting)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(case-fold-search t)
+ '(global-font-lock-mode t nil (font-lock))
+ '(mouse-avoidance-mode (quote animate) nil (avoid))
+ '(quote (display-time-mode 1))
+ '(scroll-bar-mode nil)
+ '(set-buffer-file-coding-system (quote gb2312))
+ '(set-keyboard-coding-system (quote gb2312))
+ '(set-language-environment (quote Chinese-GB))
+ '(set-terminal-coding-system (quote utf-8))
+ '(show-paren-mode t nil (paren))
+ '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
+ '(tool-bar-mode nil)
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Courier New" :foundry "outline" :slant normal :weight normal :height 196 :width normal)))))
+;;(setq evil-emacs-state-cursor '("red" box))
