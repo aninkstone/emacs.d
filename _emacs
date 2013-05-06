@@ -14,7 +14,6 @@
 (evil-leader/set-key "be" 'bs-show)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
-(evil-leader/set-key "\\" 'execute-extended-command)
 
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
@@ -56,7 +55,7 @@
 (define-key evil-normal-state-map "\C-[" 'semantic-ia-fast-jump)
 
 ;; enable autocomplete
-(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
 (require 'auto-complete)
 
 (add-to-list 'load-path "~/.emacs.d/")
@@ -113,6 +112,11 @@
 (define-key global-map "\C-\\f" 'cscope-find-this-file)
 (define-key global-map "\C-\\i" 'cscope-find-files-including-file)
 (define-key global-map "\C-\\d" 'cscope-find-called-functions)
+
+;;remap M-x
+(define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
+;;remap C-x
+;;(keyboard-translate ?\C-\\ ?\C-x)
 
 ;;color theme setting
 (add-to-list 'load-path "~/.emacs.d/color-theme")
