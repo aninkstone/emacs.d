@@ -55,7 +55,7 @@
 (define-key evil-normal-state-map "\C-[" 'semantic-ia-fast-jump)
 
 ;; enable autocomplete
-(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
 (require 'auto-complete)
 
 (add-to-list 'load-path "~/.emacs.d/")
