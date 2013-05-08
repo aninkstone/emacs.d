@@ -144,5 +144,4 @@
 
 (provide 'color-theme-desert)
 
-
 ;;; color-theme-desert.el ends here
