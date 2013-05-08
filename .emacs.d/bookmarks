@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("android"
+ (filename . "~/ngi/framework/android/")
+ (front-context-string . "android:\n  总用量 2")
+ (rear-context-string . "l/ngi/framework/")
+ (position . 30))
+("service"
+ (filename . "~/ngi/framework/service/")
+ (front-context-string . "service:\n  总用量 6")
+ (rear-context-string . "l/ngi/framework/")
+ (position . 30))
+)
