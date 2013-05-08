@@ -14,13 +14,10 @@
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
 
-(defun default-emacs-setting ()
+(funcall (lambda ()
   ;;default variable setup
   ;;this function will call at end of this file
   (setq make-backup-files nil)
   ;;(setq-default tab-width nil)
   (global-auto-revert-mode nil)
-  (color-theme-desert)
-  )
-
-(default-emacs-setting)
+  (color-theme-desert)))
