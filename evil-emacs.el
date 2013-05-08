@@ -79,3 +79,12 @@
      (evil-define-key 'motion bs-mode-map "l" 'evil-forward-char)
      )
   )
+
+;;; esc quits
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
