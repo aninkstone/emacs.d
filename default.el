@@ -180,29 +180,3 @@
   )
  
 (default-emacs-setting)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(case-fold-search t)
- '(global-font-lock-mode t nil (font-lock))
- '(mouse-avoidance-mode (quote animate) nil (avoid))
- '(quote (display-time-mode 1))
- '(scroll-bar-mode nil)
- '(set-buffer-file-coding-system (quote gb2312))
- '(set-keyboard-coding-system (quote gb2312))
- '(set-language-environment (quote Chinese-GB))
- '(set-terminal-coding-system (quote utf-8))
- '(show-paren-mode t nil (paren))
- '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
- '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Courier New" :foundry "outline" :slant normal :weight normal :height 196 :width normal)))))
