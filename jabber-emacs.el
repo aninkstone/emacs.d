@@ -1,5 +1,5 @@
 ;;jabber
-(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0")
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber")
 (require 'jabber)
 
 ;;(setq jabber-account-list
