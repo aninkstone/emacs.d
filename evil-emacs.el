@@ -27,6 +27,7 @@
                               (ebib-log-mode                . emacs)
                               (gtags-select-mode            . emacs)
                               (shell-mode                   . emacs)
+                              (eshell-mode                  . emacs)
                               (term-mode                    . emacs)
                               (bc-menu-mode                 . emacs)
                               (magit-branch-manager-mode    . emacs)
@@ -43,6 +44,11 @@
   "L" 'magit-key-mode-popup-logging)
 
 (evil-add-hjkl-bindings magit-status-mode-map 'emacs
+  "K" 'magit-discard-item
+  "l" 'magit-key-mode-popup-logging
+  "h" 'magit-toggle-diff-refine-hunk)
+
+(evil-add-hjkl-bindings magit-log-mode-map 'emacs
   "K" 'magit-discard-item
   "l" 'magit-key-mode-popup-logging
   "h" 'magit-toggle-diff-refine-hunk)

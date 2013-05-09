@@ -5,6 +5,7 @@
 (load-file "~/.emacs.d/auto-load-emacs.el")
 (load-file "~/.emacs.d/cscope-emacs.el")
 (load-file "~/.emacs.d/jabber-emacs.el")
+(load-file "~/.emacs.d/cedet-emacs.el")
 (load-file "~/.emacs.d/appengine-emacs.el")
 
 ;;remap M-x
