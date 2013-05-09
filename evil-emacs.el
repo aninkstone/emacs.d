@@ -3,7 +3,7 @@
 (require 'evil)
 (evil-mode t)
 
-(add-to-list 'load-path "~/.emacs.d/evil-numbers-master") ;
+(add-to-list 'load-path "~/.emacs.d/evil-numbers") ;
 (require 'evil-numbers)
 
 (setq evil-find-skip-newlines t)
@@ -47,7 +47,7 @@
   "l" 'magit-key-mode-popup-logging
   "h" 'magit-toggle-diff-refine-hunk)
 
-(add-to-list 'load-path "~/.emacs.d/evil-leader-master/")
+(add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
 (evil-leader/set-key "be" 'bs-show)
 (evil-leader/set-key "gs" 'magit-status)

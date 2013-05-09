@@ -7,3 +7,21 @@
 [submodule "evil"]
 	path = evil
 	url = git://gitorious.org/evil/evil.git
+[submodule "evil-surround"]
+	path = evil-surround
+	url = https://github.com/timcharper/evil-surround.git
+[submodule "evil-numbers"]
+	path = evil-numbers
+	url = https://github.com/cofi/evil-numbers.git
+[submodule "evil-leader"]
+	path = evil-leader
+	url = https://github.com/cofi/evil-leader.git
+[submodule "evil-rails"]
+	path = evil-rails
+	url = https://github.com/antono/evil-rails.git
+[submodule "evil-nerd-commenter"]
+	path = evil-nerd-commenter
+	url = https://github.com/redguardtoo/evil-nerd-commenter.git
+[submodule "color-theme-desert"]
+	path = color-theme-desert
+	url = https://github.com/superbobry/color-theme-desert.git
