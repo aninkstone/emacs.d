@@ -4,3 +4,6 @@
 [submodule "emacs-jabber"]
 	path = emacs-jabber
 	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
+[submodule "evil"]
+	path = evil
+	url = git://gitorious.org/evil/evil.git
