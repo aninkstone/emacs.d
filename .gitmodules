@@ -25,3 +25,6 @@
 [submodule "color-theme-desert"]
 	path = color-theme-desert
 	url = https://github.com/superbobry/color-theme-desert.git
+[submodule "google-maps"]
+	path = google-maps
+	url = git://git.naquadah.org/google-maps.git
