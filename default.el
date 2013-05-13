@@ -1,5 +1,4 @@
 ;;;; this is the emacs config file
-
 (load-file "~/.emacs.d/evil-emacs.el")
 (load-file "~/.emacs.d/shell-hook-emacs.el")
 (load-file "~/.emacs.d/auto-load-emacs.el")
@@ -7,6 +6,9 @@
 (load-file "~/.emacs.d/jabber-emacs.el")
 (load-file "~/.emacs.d/cedet-emacs.el")
 (load-file "~/.emacs.d/appengine-emacs.el")
+(load-file "~/.emacs.d/nxhtml-emacs.el")
+(load-file "~/.emacs.d/iswitchb-emacs.el")
+;;(load-file "~/.emacs.d/w3m-emacs.el")
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
@@ -14,6 +16,10 @@
 ;;(keyboard-translate ?\C-\\ ?\C-x)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
 
 (funcall (lambda ()
   ;;default variable setup
