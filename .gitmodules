@@ -28,3 +28,6 @@
 [submodule "google-maps"]
 	path = google-maps
 	url = git://git.naquadah.org/google-maps.git
+[submodule "nxhtml"]
+	path = nxhtml
+	url = https://github.com/emacsmirror/nxhtml.git

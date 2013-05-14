@@ -2,19 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("cpktool"
- (filename . "~/Workspace/ngi/development/cpktool/")
- (front-context-string . "ol:\n  总用量 52\n  d")
- (rear-context-string . "evelopment/cpkto")
- (position . 47))
-("android"
- (filename . "~/ngi/framework/android/")
- (front-context-string . "android:\n  总用量 2")
- (rear-context-string . "l/ngi/framework/")
- (position . 30))
-("service"
- (filename . "~/ngi/framework/service/")
- (front-context-string . "service:\n  总用量 6")
- (rear-context-string . "l/ngi/framework/")
- (position . 30))
+(("mac"
+ (filename . "/Volumes/E/development/build/mac/")
+ (front-context-string . "c:\n  total used ")
+ (rear-context-string . "lopment/build/ma")
+ (position . 34))
+("war"
+ (filename . "/Volumes/E/development/web/console/war/")
+ (front-context-string . "ar:\n  total used")
+ (rear-context-string . "nt/web/console/w")
+ (position . 39))
+("runtime"
+ (filename . "/Volumes/E/development/runtime/")
+ (front-context-string . "mes/E/developmen")
+ (rear-context-string)
+ (position . 8))
 )

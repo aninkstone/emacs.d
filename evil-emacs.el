@@ -1,7 +1,6 @@
 ;;evil setting
 (add-to-list 'load-path "~/.emacs.d/evil") ;
 (require 'evil)
-(evil-mode t)
 
 (add-to-list 'load-path "~/.emacs.d/evil-numbers") ;
 (require 'evil-numbers)
@@ -55,7 +54,8 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
-(evil-leader/set-key "be" 'bs-show)
+;;(evil-leader/set-key "be" 'bs-show)
+(evil-leader/set-key "be" 'iswitchb-buffer)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
 
@@ -72,17 +72,15 @@
 
 ;;; BS-menu
 (eval-after-load 'bs
-  ;;'(progn
-     ;;disable default bs key bindings
-     ;;(define-key bs-mode-map "k" nil)
-     ;;)
   '(progn
      ;; use the standard bs bindings as a base
      (evil-make-overriding-map bs-mode-map 'normal t)
-     (evil-define-key 'motion bs-mode-map "h" 'evil-backward-char)
-     (evil-define-key 'motion bs-mode-map "j" 'bs-down)
-     (evil-define-key 'motion bs-mode-map "k" 'bs-up)
-     (evil-define-key 'motion bs-mode-map "l" 'evil-forward-char)
+     (evil-define-key 'motion bs-mode-map
+       "h" 'evil-backward-char
+       "j" 'bs-down
+       "k" 'bs-up
+       "k" 'bs-up
+       "s" 'evil-forward-char)
      )
   )
 
@@ -94,3 +92,5 @@
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+
+(evil-mode 1)
