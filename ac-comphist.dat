@@ -1,180 +1,180 @@
-((("s" .
-   [1])
-  ("sr" .
-   [1 0])
-  ("lambda" .
-   [1 0 0 0 0 0])
-  ("funcall" .
+((("magit-show-branches" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("magit-log" .
+   [2 0 0 0 0 0 0 0 0])
+  ("log" .
+   [1 0 0])
+  ("console" .
    [1 0 0 0 0 0 0])
-  ("emacs" .
+  ("shell" .
    [1 0 0 0 0])
-  ("load-file" .
+  ("t" .
+   [1])
+  ("shell-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("magit-svn" .
+   [0 0 0 0 0 1 0 0 0])
+  ("semantic-mode" .
+   [2 0 0 0 0 1 0 0 0 0 0 0 1])
+  ("w3m" .
+   [0 0 1])
+  ("cscope-database-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("Cscope" .
+   [0 0 0 0 0 1])
+  ("global" .
+   [0 0 0 0 0 1])
+  ("semantic-symref" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("semantic" .
+   [1 0 0 0 0 0 0 1])
+  ("evil-mode" .
+   [1 0 0 0 0 0 0 0 0])
+  ("color-gray-p" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("custom-set-variables" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("customize" .
+   [0 0 0 0 0 1 0 0 0])
+  ("highlight-symbol-at-point" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("smooth-scroll" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("smooth" .
+   [0 0 0 0 0 1])
+  ("switch-to-prev-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("cscope-find-global-definition" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-global-definition-no-prompting" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-functions-calling-this-function" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-files-including-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-egrep-pattern" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-this-symbol" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("cscope-find-this-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 1 0 0 0 0 0 1])
+  ("cscope-find-this-text-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-find-called-functions" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-tell-user-about-directory" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("cscope-use-face" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("cscope-call" .
+   [0 0 0 0 0 0 0 0 1 0 1])
+  ("color" .
+   [0 0 0 0 1])
+  ("load-theme" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("nil" .
+   [11 0 0])
+  ("new" .
+   [1 0 0])
+  ("evil-scroll-page-up" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("evil-parser" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("top" .
+   [2 0 0])
+  ("defun" .
+   [0 0 0 0 1])
+  ("domain" .
+   [1 0 0 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("setq" .
+   [4 0 0 0])
+  ("add-to-list" .
+   [5 0 0 0 0 0 0 0 0 0 0])
+  ("load-path" .
+   [5 0 0 0 0 0 0 0 0])
+  ("require" .
+   [13 0 0 0 2 0 1])
+  ("xcscope" .
+   [1 0 0 1 0 0 0])
+  ("tangotango" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("color-theme-desert" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("color-theme-spec" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("switch-to-buffer" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ibuffer" .
+   [0 0 0 1 0 0 0])
+  ("highlight-symbol-remove-all" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("undo-tree" .
+   [2 0 0 0 0 0 0 0 0])
+  ("dirtree" .
+   [0 0 0 1 0 0 1])
+  ("~/.emacs.d/tree-mode/" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("import" .
+   [1 0 0 0 0 0])
+  ("glade-mode" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("autoload" .
+   [1 0 0 0 0 0 0 0])
+  ("message" .
+   [3 0 0 0 0 0 0])
+  ("r" .
+   [1])
+  ("vimrc-mode-0.2.1" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("~/.emacs.d" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("egit" .
+   [1 0 0 0])
+  ("local-unset-key" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("motion" .
+   [1 0 0 0 0 0])
+  ("bs-mode-map" .
+   [2 0 0 0 0 0 0 0 0 1 0])
+  ("bs" .
+   [1 0])
+  ("cscope-list-entry-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("cscope-list-entry-keymap" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("cscope-quit" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("gnus" .
+   [1 0 0 0])
+  ("gnus-background-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("jabber" .
+   [1 0 0 0 0 2])
+  ("term" .
+   [1 0 0 0])
+  ("term-exec" .
+   [1 0 0 0 0 0 0 0 0])
+  ("smooth-scrolling" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eshell" .
+   [2 0 0 0 0 0])
+  ("evil-normal-state-map" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ctl-x-map" .
    [1 0 0 0 0 0 0 0 0])
   ("sr-speedbar" .
    [1 0 0 0 0 0 2 0 0 0 0])
-  ("ctl-x-map" .
+  ("load-file" .
    [1 0 0 0 0 0 0 0 0])
-  ("evil-normal-state-map" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eshell" .
-   [2 0 0 0 0 0])
-  ("smooth-scrolling" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("term-exec" .
-   [1 0 0 0 0 0 0 0 0])
-  ("term" .
-   [1 0 0 0])
-  ("jabber" .
-   [1 0 0 0 0 2])
-  ("gnus-background-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("gnus" .
-   [1 0 0 0])
-  ("cscope-quit" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-list-entry-keymap" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("cscope-list-entry-hook" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("bs" .
-   [1 0])
-  ("bs-mode-map" .
-   [2 0 0 0 0 0 0 0 0 1 0])
-  ("motion" .
-   [1 0 0 0 0 0])
-  ("local-unset-key" .
-   [1 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("egit" .
-   [1 0 0 0])
-  ("~/.emacs.d" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("vimrc-mode-0.2.1" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("r" .
-   [1])
-  ("message" .
-   [3 0 0 0 0 0 0])
-  ("autoload" .
-   [1 0 0 0 0 0 0 0])
-  ("glade-mode" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("import" .
-   [1 0 0 0 0 0])
-  ("~/.emacs.d/tree-mode/" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("dirtree" .
-   [0 0 0 1 0 0 1])
-  ("undo-tree" .
-   [2 0 0 0 0 0 0 0 0])
-  ("highlight-symbol-remove-all" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("ibuffer" .
-   [0 0 0 1 0 0 0])
-  ("switch-to-buffer" .
-   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("color-theme-spec" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("color-theme-desert" .
-   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("tangotango" .
-   [0 0 0 0 1 0 0 0 0 0])
-  ("xcscope" .
-   [1 0 0 1 0 0 0])
-  ("require" .
-   [13 0 0 0 2 0 1])
-  ("load-path" .
-   [5 0 0 0 0 0 0 0 0])
-  ("add-to-list" .
-   [5 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [4 0 0 0])
-  ("set" .
-   [1 0 0])
-  ("domain" .
-   [1 0 0 0 0 0])
-  ("defun" .
-   [0 0 0 0 1])
-  ("top" .
-   [2 0 0])
-  ("evil-parser" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-scroll-page-up" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("new" .
-   [1 0 0])
-  ("nil" .
-   [11 0 0])
-  ("load-theme" .
-   [0 0 0 0 1 0 0 0 0 0])
-  ("color" .
-   [0 0 0 0 1])
-  ("cscope-call" .
-   [0 0 0 0 0 0 0 0 1 0 1])
-  ("cscope-use-face" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("cscope-tell-user-about-directory" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-called-functions" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-this-text-string" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-this-file" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 1 0 0 0 0 0 1])
-  ("cscope-find-this-symbol" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("cscope-find-egrep-pattern" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-files-including-file" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-functions-calling-this-function" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-global-definition-no-prompting" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cscope-find-global-definition" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("switch-to-prev-buffer" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("smooth" .
-   [0 0 0 0 0 1])
-  ("smooth-scroll" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("highlight-symbol-at-point" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("customize" .
-   [0 0 0 0 0 1 0 0 0])
-  ("custom-set-variables" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("color-gray-p" .
-   [0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-mode" .
-   [1 0 0 0 0 0 0 0 0])
-  ("semantic" .
-   [1 0 0 0 0 0 0 1])
-  ("semantic-symref" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("global" .
-   [0 0 0 0 0 1])
-  ("Cscope" .
-   [0 0 0 0 0 1])
-  ("cscope-database-file" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("w3m" .
-   [0 0 1])
-  ("semantic-mode" .
-   [2 0 0 0 0 1 0 0 0 0 0 0 1])
-  ("magit-svn" .
-   [0 0 0 0 0 1 0 0 0])
-  ("shell-mode-hook" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("t" .
-   [1])
-  ("shell" .
+  ("emacs" .
    [1 0 0 0 0])
-  ("console" .
+  ("funcall" .
    [1 0 0 0 0 0 0])
-  ("log" .
-   [1 0 0])
-  ("magit-log" .
-   [2 0 0 0 0 0 0 0 0])
-  ("magit-show-branches" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("sr" .
+   [1 0])
+  ("s" .
+   [1])))
