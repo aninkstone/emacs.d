@@ -12,6 +12,7 @@
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
+(define-key global-map (kbd "\C-\\b") 'iswitchb-buffer)
 ;;remap C-x
 ;;(keyboard-translate ?\C-\\ ?\C-x)
 
