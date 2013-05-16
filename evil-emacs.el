@@ -29,11 +29,13 @@
                               (eshell-mode                  . emacs)
                               (term-mode                    . emacs)
                               (bc-menu-mode                 . emacs)
+                              (circe-server-mode            . emacs)
                               (magit-branch-manager-mode    . emacs)
                               (semantic-symref-results-mode . emacs)
                               (rdictcc-buffer-mode          . emacs)
                               (erc-mode                     . emacs))
-                              ;;(erc-mode                     . normal))
+                              ;;(bs-mode                      . emacs)
+                              ;;(erc-mode                     . normal)
       do (evil-set-initial-state mode state))
 
 ;;(evil-add-hjkl-bindings *bc-menu-mode-map* 'emacs)
@@ -54,8 +56,8 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
-;;(evil-leader/set-key "be" 'bs-show)
-(evil-leader/set-key "be" 'iswitchb-buffer)
+(evil-leader/set-key "be" 'bs-show)
+;(evil-leader/set-key "be" 'iswitchb-buffer)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
 
@@ -79,8 +81,7 @@
        "h" 'evil-backward-char
        "j" 'bs-down
        "k" 'bs-up
-       "k" 'bs-up
-       "s" 'evil-forward-char)
+       "l" 'evil-forward-char)
      )
   )
 

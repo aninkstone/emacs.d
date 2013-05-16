@@ -1,3 +1,5 @@
+;;remap M-x
+
 ;;;; this is the emacs config file
 (load-file "~/.emacs.d/evil-emacs.el")
 (load-file "~/.emacs.d/shell-hook-emacs.el")
@@ -8,12 +10,12 @@
 (load-file "~/.emacs.d/appengine-emacs.el")
 (load-file "~/.emacs.d/nxhtml-emacs.el")
 (load-file "~/.emacs.d/iswitchb-emacs.el")
+(load-file "~/.emacs.d/circe-emacs.el")
 ;;(load-file "~/.emacs.d/w3m-emacs.el")
 
-;;remap M-x
+;;remap C-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
 (define-key global-map (kbd "\C-\\b") 'iswitchb-buffer)
-;;remap C-x
 ;;(keyboard-translate ?\C-\\ ?\C-x)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
@@ -27,5 +29,4 @@
   ;;this function will call at end of this file
   (setq make-backup-files nil)
   ;;(setq-default tab-width nil)
-  (global-auto-revert-mode nil)
-  (color-theme-desert)))
+  (global-auto-revert-mode nil)))

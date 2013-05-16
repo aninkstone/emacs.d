@@ -31,3 +31,6 @@
 [submodule "nxhtml"]
 	path = nxhtml
 	url = https://github.com/emacsmirror/nxhtml.git
+[submodule "circe"]
+	path = circe
+	url = https://github.com/jorgenschaefer/circe.git
