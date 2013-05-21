@@ -16,7 +16,8 @@
 (require 'color-theme-desert)
 
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'zenburn)
+(require 'zenburn-theme)
+;;(load-theme 'zenburn)
 
 ;;smooth scroll
 (add-to-list 'load-path "~/.emacs.d/smooth-scroll")

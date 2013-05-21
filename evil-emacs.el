@@ -56,8 +56,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
-(evil-leader/set-key "be" 'bs-show)
-;(evil-leader/set-key "be" 'iswitchb-buffer)
+(evil-leader/set-key "be" 'evil-show-files)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
 
