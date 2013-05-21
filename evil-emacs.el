@@ -2,6 +2,12 @@
 (add-to-list 'load-path "~/.emacs.d/evil") ;
 (require 'evil)
 
+;;disable evil default leader map
+(define-key evil-motion-state-map "\\" nil)
+(define-key evil-motion-state-map "\\be" 'evil-show-files)
+(define-key evil-motion-state-map "\\gs" 'magit-status)
+(define-key evil-motion-state-map "\\gl" 'magit-log)
+
 (add-to-list 'load-path "~/.emacs.d/evil-numbers") ;
 (require 'evil-numbers)
 
@@ -56,7 +62,8 @@
 
 (add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
-(evil-leader/set-key "be" 'evil-show-files)
+
+;;(evil-leader/set-key "be" 'evil-show-files)
 (evil-leader/set-key "gs" 'magit-status)
 (evil-leader/set-key "gl" 'magit-log)
 
