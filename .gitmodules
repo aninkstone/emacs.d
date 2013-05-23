@@ -34,3 +34,6 @@
 [submodule "circe"]
 	path = circe
 	url = https://github.com/jorgenschaefer/circe.git
+[submodule "color-theme-tangotango"]
+	path = color-theme-tangotango
+	url = https://github.com/juba/color-theme-tangotango.git
