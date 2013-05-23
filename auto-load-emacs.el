@@ -38,3 +38,5 @@
 (add-to-list 'load-path "~/.emacs.d")
 (setq sr-speedbar-right-side nil)
 (require 'sr-speedbar)
+
+(require 'xcscope)
