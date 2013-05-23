@@ -46,3 +46,7 @@
 
 ;;multi-term
 (require 'multi-term)
+
+;;fff
+(require 'fff)
+(fff-install-map)
