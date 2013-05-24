@@ -2,11 +2,19 @@
 (add-to-list 'load-path "~/.emacs.d/evil") ;
 (require 'evil)
 
+;; enable hightlight-symbol
+(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
+(require 'highlight-symbol)
+;;(evil-leader/set-key "m" 'highlight-symbol-at-point)
+;;(evil-leader/set-key "n" 'highlight-symbol-remove-all)
+
 ;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
 (define-key evil-motion-state-map "\\be" 'evil-show-files)
 (define-key evil-motion-state-map "\\gs" 'magit-status)
 (define-key evil-motion-state-map "\\gl" 'magit-log)
+(define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
+(define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
 
 (add-to-list 'load-path "~/.emacs.d/evil-numbers") ;
 (require 'evil-numbers)
@@ -71,12 +79,6 @@
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-replace-state-map (kbd "C-u") 'evil-scroll-page-up)
-
-;; enable hightlight-symbol
-(add-to-list 'load-path "~/.emacs.d/highlight-symbol")
-(require 'highlight-symbol)
-(evil-leader/set-key "m" 'highlight-symbol-at-point)
-(evil-leader/set-key "n" 'highlight-symbol-remove-all)
 
 ;;; BS-menu
 (eval-after-load 'bs

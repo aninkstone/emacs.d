@@ -50,3 +50,5 @@
 ;;fff
 (require 'fff)
 (fff-install-map)
+
+(require 'mcomplete)
