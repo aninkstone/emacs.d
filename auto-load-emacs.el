@@ -12,11 +12,14 @@
 
 ;;color theme setting
 (add-to-list 'load-path "~/.emacs.d/color-theme")
-(add-to-list 'load-path "~/.emacs.d/color-theme-desert")
-(require 'color-theme-desert)
+(add-to-list 'load-path "~/.emacs.d/color-theme-tangotango")
+(require 'color-theme-tangotango)
+(color-theme-tangotango)
+;;(add-to-list 'load-path "~/.emacs.d/color-theme-desert")
+;;(require 'color-theme-desert)
 
 (add-to-list 'load-path "~/.emacs.d/themes")
-(require 'zenburn-theme)
+;;(require 'zenburn-theme)
 ;;(load-theme 'zenburn)
 
 ;;smooth scroll
