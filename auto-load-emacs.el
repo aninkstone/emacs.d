@@ -14,14 +14,9 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-desert")
 (require 'color-theme-desert)
-(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
-(require 'color-theme-solarized)
-(add-to-list 'load-path "~/.emacs.d/color-theme-tangotango")
-(require 'color-theme-tangotango)
-(color-theme-tangotango)
 
 (add-to-list 'load-path "~/.emacs.d/themes")
-;;(require 'zenburn-theme)
+(require 'zenburn-theme)
 ;;(load-theme 'zenburn)
 
 ;;smooth scroll
@@ -52,3 +47,5 @@
 (fff-install-map)
 
 (require 'mcomplete)
+
+(require 'xcscope)

@@ -137,7 +137,7 @@ fi
 	find $DIR \( -type f -o -type l \)
     fi
 ) | \
-    egrep -i '\.([chly](xx|pp)*|cc|hh|cpp|java|js)$' | \
+    egrep -i '\.([chly](xx|pp)*|cc|hh|cpp|java|js|hpp)$' | \
     sed -e '/\/CVS\//d' -e '/\/RCS\//d' -e 's/^\.\///' | \
     sort > $LIST_FILE
 
