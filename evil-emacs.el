@@ -68,6 +68,8 @@
   "l" 'magit-key-mode-popup-logging
   "h" 'magit-toggle-diff-refine-hunk)
 
+(evil-add-hjkl-bindings semantic-symref-results-mode)
+
 (add-to-list 'load-path "~/.emacs.d/evil-leader")
 (require 'evil-leader)
 

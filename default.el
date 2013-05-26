@@ -30,3 +30,7 @@
   (setq make-backup-files nil)
   ;;(setq-default tab-width nil)
   (global-auto-revert-mode nil)))
+
+(if (eq system-type "darwin")
+    (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
+    (setq exec-path (append exec-path '("/usr/local/bin"))))
