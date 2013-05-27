@@ -13,9 +13,8 @@
 ;;(load-file "~/.emacs.d/circe-emacs.el")
 ;;(load-file "~/.emacs.d/w3m-emacs.el")
 
-;;remap C-x
+;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
-(define-key global-map (kbd "\C-\\b") 'iswitchb-buffer)
 ;;(keyboard-translate ?\C-\\ ?\C-x)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
