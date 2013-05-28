@@ -2,19 +2,14 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("mac"
- (filename . "/Volumes/E/development/build/mac/")
- (front-context-string . "c:\n  total used ")
- (rear-context-string . "lopment/build/ma")
- (position . 34))
-("war"
- (filename . "/Volumes/E/development/web/console/war/")
- (front-context-string . "ar:\n  total used")
- (rear-context-string . "nt/web/console/w")
- (position . 39))
-("runtime"
- (filename . "/Volumes/E/development/runtime/")
- (front-context-string . "mes/E/developmen")
- (rear-context-string)
- (position . 8))
+(("ngi"
+ (filename . "~/ngi/")
+ (front-context-string . "addrinfo\n  drwxr")
+ (rear-context-string . "96  5月 15 15:05 ")
+ (position . 180))
+("development"
+ (filename . "/mnt/fat32/development/")
+ (front-context-string . "build\n  -rwxr-xr")
+ (rear-context-string . "68  2月  8 14:50 ")
+ (position . 189))
 )
