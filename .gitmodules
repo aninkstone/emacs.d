@@ -37,3 +37,6 @@
 [submodule "color-theme-tangotango"]
 	path = color-theme-tangotango
 	url = https://github.com/juba/color-theme-tangotango.git
+[submodule "diminish"]
+	path = diminish
+	url = https://github.com/emacsmirror/diminish.git

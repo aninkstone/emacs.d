@@ -52,3 +52,15 @@
 (require 'mcomplete)
 
 (require 'xcscope)
+
+;;load diminish mode
+(add-to-list 'load-path "~/.emacs.d/diminish/")
+
+(require 'ido)
+(ido-mode t)
+
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
+
+(require 'recentf)
+(recentf-mode 1)
