@@ -59,8 +59,8 @@
 (require 'ido)
 (ido-mode t)
 
-(require 'session)
-(add-hook 'after-init-hook 'session-initialize)
+;;(require 'session)
+;;(add-hook 'after-init-hook 'session-initialize)
 
 (require 'recentf)
 (recentf-mode 1)
