@@ -40,3 +40,6 @@
 [submodule "diminish"]
 	path = diminish
 	url = https://github.com/emacsmirror/diminish.git
+[submodule "package.el"]
+	path = package.el
+	url = https://github.com/technomancy/package.el.git

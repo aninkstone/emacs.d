@@ -33,3 +33,5 @@
 (if (eq system-type "darwin")
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
+
+(load-file "~/.emacs.d/package-emacs.el")
