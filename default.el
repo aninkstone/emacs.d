@@ -35,3 +35,16 @@
     (setq exec-path (append exec-path '("/usr/local/bin"))))
 
 (load-file "~/.emacs.d/package-emacs.el")
+
+(setq auto-mode-alist
+  (append
+    '(("\\.C$"    . c++-mode)
+      ("\\.H$"    . c++-mode)
+      ("\\.cc$"   . c++-mode)
+      ("\\.hh$"   . c++-mode)
+      ("\\.c$"    . c-mode)
+      ("\\.h$"    . c-mode)
+      ("\\.m$"    . objc-mode)
+      ("\\.java$" . java-mode)
+      ("\\.aidl$" . java-mode)
+     ) auto-mode-alist))
