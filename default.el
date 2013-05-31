@@ -10,7 +10,6 @@
 (load-file "~/.emacs.d/appengine-emacs.el")
 (load-file "~/.emacs.d/nxhtml-emacs.el")
 (load-file "~/.emacs.d/iswitchb-emacs.el")
-;;(load-file "~/.emacs.d/circe-emacs.el")
 ;;(load-file "~/.emacs.d/w3m-emacs.el")
 
 ;;remap M-x
