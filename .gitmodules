@@ -1,36 +1,9 @@
-[submodule "magit"]
-	path = magit
+[submodule "addons.gt/package.el"]
+	path = addons.gt/package.el
+	url = https://github.com/technomancy/package.el
+[submodule "addons.gt/evil"]
+	path = addons.gt/evil
+	url = https://github.com/emacsmirror/evil.git
+[submodule "addons.gt/magit"]
+	path = addons.gt/magit
 	url = https://github.com/magit/magit.git
-[submodule "evil"]
-	path = evil
-	url = git://gitorious.org/evil/evil.git
-[submodule "evil-surround"]
-	path = evil-surround
-	url = https://github.com/timcharper/evil-surround.git
-[submodule "evil-numbers"]
-	path = evil-numbers
-	url = https://github.com/cofi/evil-numbers.git
-[submodule "evil-leader"]
-	path = evil-leader
-	url = https://github.com/cofi/evil-leader.git
-[submodule "evil-rails"]
-	path = evil-rails
-	url = https://github.com/antono/evil-rails.git
-[submodule "evil-nerd-commenter"]
-	path = evil-nerd-commenter
-	url = https://github.com/redguardtoo/evil-nerd-commenter.git
-[submodule "google-maps"]
-	path = google-maps
-	url = git://git.naquadah.org/google-maps.git
-[submodule "nxhtml"]
-	path = nxhtml
-	url = https://github.com/emacsmirror/nxhtml.git
-[submodule "color-theme-tangotango"]
-	path = color-theme-tangotango
-	url = https://github.com/juba/color-theme-tangotango.git
-[submodule "diminish"]
-	path = diminish
-	url = https://github.com/emacsmirror/diminish.git
-[submodule "package.el"]
-	path = package.el
-	url = https://github.com/technomancy/package.el.git
