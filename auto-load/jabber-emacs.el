@@ -1,10 +1,10 @@
 ;;================================================
 ;; JABBER
 ;;================================================
-(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.92")
-;;(require 'jabber)
-(require 'jabber-autoloads)
-(require 'jabber-wmii)
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber")
+(require 'jabber)
+;;(require 'jabber-autoloads)
+;;(require 'jabber-wmii)
 
 ;;(setq jabber-account-list
 ;;  '(("thatways.c@gmail.com" 
