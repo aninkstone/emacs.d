@@ -1,15 +1,15 @@
 ;;remap M-x
 
 ;;;; this is the emacs config file
-(load-file "~/.emacs.d/evil-emacs.el")
-(load-file "~/.emacs.d/shell-hook-emacs.el")
-(load-file "~/.emacs.d/auto-load-emacs.el")
-(load-file "~/.emacs.d/cscope-emacs.el")
-(load-file "~/.emacs.d/jabber-emacs.el")
-(load-file "~/.emacs.d/cedet-emacs.el")
-(load-file "~/.emacs.d/appengine-emacs.el")
-(load-file "~/.emacs.d/nxhtml-emacs.el")
-(load-file "~/.emacs.d/iswitchb-emacs.el")
+(load-file "~/.emacs.d/auto-load/evil-emacs.el")
+(load-file "~/.emacs.d/auto-load/shell-hook-emacs.el")
+(load-file "~/.emacs.d/auto-load/auto-load-emacs.el")
+(load-file "~/.emacs.d/auto-load/cscope-emacs.el")
+(load-file "~/.emacs.d/auto-load/jabber-emacs.el")
+(load-file "~/.emacs.d/auto-load/cedet-emacs.el")
+(load-file "~/.emacs.d/auto-load/appengine-emacs.el")
+(load-file "~/.emacs.d/auto-load/nxhtml-emacs.el")
+(load-file "~/.emacs.d/auto-load/iswitchb-emacs.el")
 ;;(load-file "~/.emacs.d/circe-emacs.el")
 ;;(load-file "~/.emacs.d/w3m-emacs.el")
 
@@ -34,8 +34,6 @@
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
 
-(load-file "~/.emacs.d/package-emacs.el")
-
 (setq auto-mode-alist
   (append
     '(("\\.C$"    . c++-mode)
@@ -44,6 +42,7 @@
       ("\\.hh$"   . c++-mode)
       ("\\.c$"    . c-mode)
       ("\\.h$"    . c-mode)
+      ("\\.h$"    . c++-mode)
       ("\\.m$"    . objc-mode)
       ("\\.java$" . java-mode)
       ("\\.aidl$" . java-mode)

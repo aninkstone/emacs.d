@@ -6,10 +6,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;;undo
-(add-to-list 'load-path "~/.emacs.d")
-(require 'undo-tree)
-
 ;;color theme setting
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (add-to-list 'load-path "~/.emacs.d/color-theme-tangotango")
@@ -30,17 +26,26 @@
 (setq smooth-scroll-margin 2)
 ;;(setq scroll-conservatively 10000)    ;;text to scroll one line at a time when you move the cursor past the top or bottom of the window
 
-(add-to-list 'load-path "~/.emacs.d")
-(require 'goto-last-change)
+;;load diminish mode
+(add-to-list 'load-path "~/.emacs.d/diminish/")
 
 ;;magit
 (add-to-list 'load-path "~/.emacs.d/magit")
 (require 'magit)
 
+
+(add-to-list 'load-path "~/.emacs.d/auto-load")
+(require 'goto-last-change)
+
 ;;sr-speedbar 
-(add-to-list 'load-path "~/.emacs.d")
 (setq sr-speedbar-right-side nil)
 (require 'sr-speedbar)
+
+;;undo
+(require 'undo-tree)
+
+(require 'ido)
+(ido-mode t)
 
 ;;multi-term
 (require 'multi-term)
@@ -53,14 +58,7 @@
 
 (require 'xcscope)
 
-;;load diminish mode
-(add-to-list 'load-path "~/.emacs.d/diminish/")
-
-(require 'ido)
-(ido-mode t)
-
-;;(require 'session)
-;;(add-hook 'after-init-hook 'session-initialize)
-
 (require 'recentf)
 (recentf-mode 1)
+
+(load-file "~/.emacs.d/auto-load/package-emacs.el")
