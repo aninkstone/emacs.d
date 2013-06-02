@@ -36,6 +36,9 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
 (setq indent-line-function 'insert-tab)
 
 (funcall (lambda ()
