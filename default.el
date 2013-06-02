@@ -23,6 +23,7 @@
 (load-file "~/.emacs.d/addons.el/e-shell.el")
 (load-file "~/.emacs.d/addons.el/e-sr-speedbar.el")
 (load-file "~/.emacs.d/addons.el/e-undo-tree.el")
+(load-file "~/.emacs.d/addons.el/e-dired+.el")
 (load-file "~/.emacs.d/addons.el/e-package.el")
 ;;(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 ;;(load-file "~/.emacs.d/addons.el/e-nxhtml.el")
