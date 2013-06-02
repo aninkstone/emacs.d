@@ -7,3 +7,6 @@
 [submodule "addons.gt/magit"]
 	path = addons.gt/magit
 	url = https://github.com/magit/magit.git
+[submodule "addons.gt/color-theme-tangotango"]
+	path = addons.gt/color-theme-tangotango
+	url = https://github.com/juba/color-theme-tangotango.git
