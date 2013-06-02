@@ -10,11 +10,12 @@
 (load-file "~/.emacs.d/auto-load/appengine-emacs.el")
 (load-file "~/.emacs.d/auto-load/nxhtml-emacs.el")
 (load-file "~/.emacs.d/auto-load/iswitchb-emacs.el")
-;;(load-file "~/.emacs.d/w3m-emacs.el")
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
-;;(keyboard-translate ?\C-\\ ?\C-x)
+;;(keyboard-translate ?\C-\\ ?\M-x)
+(global-set-key (kbd "C-;") ctl-x-map)
+;;(keyboard-translate ?\C-\w ?\C-x)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
 
