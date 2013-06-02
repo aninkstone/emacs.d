@@ -1,7 +1,7 @@
 ;;================================================
 ;; JABBER
 ;;================================================
-(add-to-list 'load-path "~/.emacs.d/emacs-jabber")
+(add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.92")
 (require 'jabber)
 ;;(require 'jabber-autoloads)
 ;;(require 'jabber-wmii)
