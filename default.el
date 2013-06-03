@@ -2,6 +2,7 @@
 
 ;;;; this is the emacs config file
 (add-to-list 'load-path "~/.emacs.d/addons.el/")
+(load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-appengine.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
