@@ -67,3 +67,8 @@
       ("\\.java$" . java-mode)
       ("\\.aidl$" . java-mode)
      ) auto-mode-alist))
+
+(defalias 'make 'compile)
+(defalias 'find 'find-name-dired)
+(defalias 'nu   'linum-mode)
+(defalias 'sb   'sr-speedbar-toggle)
