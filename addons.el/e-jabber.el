@@ -43,3 +43,4 @@
 (setq jabber-post-connect-hooks (quote (jabber-send-current-presence jabber-muc-autojoin jabber-whitespace-ping-start jabber-vcard-avatars-find-current jabber-autoaway-start)))
 (setq jabber-roster-line-format " %c %-25n %u %-8s  %S")
 
+(setq jabber-vcard-avatars-retrieve nil jabber-chat-buffer-show-avatar nil) 
