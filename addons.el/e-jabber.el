@@ -3,21 +3,25 @@
 ;;================================================
 (add-to-list 'load-path "~/.emacs.d/elpa/jabber-0.8.90")
 (require 'jabber)
-;;(require 'jabber-autoloads)
-;;(require 'jabber-wmii)
+(require 'jabber-autoloads)
+(require 'jabber-wmii)
 
-;;(setq jabber-account-list
-;;  '(("thatways.c@gmail.com" 
-;;    (:network-server . "talk.google.com")
-;;    (:connection-type . ssl)))
-;;  )
 (setq jabber-account-list
-  '(("thatway.c@gmail.com" 
+  '(("thatways.c@gmail.com" 
     (:network-server . "talk.google.com")
     (:connection-type . ssl))
-    ("thatways.c@gmail.com" 
-    (:network-server . "talk.google.com")
-    (:connection-type . ssl))))
+    ("thatway.c@jabber.org" 
+    (:network-server . "jabber.org")
+    (:connection-type . ssl)))
+  )
+
+;;(setq jabber-account-list
+;;  '(("thatway.c@gmail.com" 
+;;    (:network-server . "talk.google.com")
+;;    (:connection-type . ssl))
+;;    ("thatways.c@gmail.com" 
+;;    (:network-server . "talk.google.com")
+;;    (:connection-type . ssl))))
 
 (setq jabber-alert-info-message-hooks (quote (jabber-info-display jabber-info-echo jabber-info-wmii)))
 (setq jabber-alert-message-hooks (quote (jabber-message-scroll jabber-message-echo jabber-message-wmii)))
