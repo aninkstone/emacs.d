@@ -6,8 +6,7 @@
 
 (eval-after-load 'anything
   '(progn
-     (setq anything-enable-digit-shortcuts t)
-     (global-set-key (kbd "<f9>") 'anything)))
+     (setq anything-enable-digit-shortcuts t)))
 
 (eval-after-load 'anything-config
   '(add-to-list 'anything-sources anything-c-source-file-cache))
