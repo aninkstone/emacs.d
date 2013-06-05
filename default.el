@@ -27,6 +27,7 @@
 (load-file "~/.emacs.d/addons.el/e-package.el")
 (load-file "~/.emacs.d/addons.el/e-helm.el")
 (load-file "~/.emacs.d/addons.el/e-ahs.el")
+(load-file "~/.emacs.d/addons.el/e-filecache.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-multi-term.el")
 ;;(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
@@ -71,6 +72,6 @@
      ) auto-mode-alist))
 
 (defalias 'make 'compile)
-(defalias 'find 'find-name-dired)
+(defalias 'fnd  'find-name-dired)
 (defalias 'nu   'linum-mode)
 (defalias 'sb   'sr-speedbar-toggle)
