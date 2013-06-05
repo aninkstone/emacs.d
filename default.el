@@ -26,6 +26,7 @@
 (load-file "~/.emacs.d/addons.el/e-dired+.el")
 (load-file "~/.emacs.d/addons.el/e-package.el")
 (load-file "~/.emacs.d/addons.el/e-helm.el")
+(load-file "~/.emacs.d/addons.el/e-ahs.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-multi-term.el")
 ;;(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
