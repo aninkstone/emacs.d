@@ -27,6 +27,7 @@
 (load-file "~/.emacs.d/addons.el/e-ahs.el")
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
 (load-file "~/.emacs.d/addons.el/e-anything.el")
+(load-file "~/.emacs.d/addons.el/e-org.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-dired+.el")
 ;;(load-file "~/.emacs.d/addons.el/e-ido.el")
