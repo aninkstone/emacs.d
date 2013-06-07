@@ -16,3 +16,6 @@
 [submodule "addons.gt/helm"]
 	path = addons.gt/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "addons.gt/org-mode"]
+	path = addons.gt/org-mode
+	url = git://orgmode.org/org-mode.git
