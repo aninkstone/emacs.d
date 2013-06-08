@@ -58,8 +58,19 @@
   (global-auto-revert-mode nil)))
 
 (if (eq system-type "darwin")
+    ;;append brew path
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
+
+;;set fullscreen
+(set-frame-parameter nil 'fullscreen 'fullboth)
+
+;;(defun toggle-fullscreen ()
+;;  "Toggle full screen"
+;;  (interactive)
+;;  (set-frame-parameter
+;;     nil 'fullscreen
+;;     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
 
 (setq auto-mode-alist
   (append
