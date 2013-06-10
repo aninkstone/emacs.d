@@ -68,8 +68,6 @@
 
 (evil-add-hjkl-bindings semantic-symref-results-mode)
 
-(evil-add-hjkl-bindings magit-status-mode-map 'emacs
-
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)

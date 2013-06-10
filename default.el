@@ -45,6 +45,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
@@ -65,12 +66,10 @@
 ;;set fullscreen
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;;(defun toggle-fullscreen ()
-;;  "Toggle full screen"
-;;  (interactive)
+;;(if (display-graphic-p) (funcall (lambda () (
 ;;  (set-frame-parameter
-;;     nil 'fullscreen
-;;     (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+;;   nil 'fullscreen
+;;   (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))))
 
 (setq auto-mode-alist
   (append
