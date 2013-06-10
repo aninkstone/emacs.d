@@ -14,13 +14,9 @@
 (define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
 (define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
 
-;;(add-to-list 'load-path "~/.emacs.d/evil-numbers") ;
-;;(require 'evil-numbers)
-
 (setq evil-find-skip-newlines t)
 (setq evil-move-cursor-back nil evil-cross-lines t)
 (setq evil-mode-line-format nil)
-;;(setq evil-leader/in-all-states t)
 
 (setq evil-normal-state-tag   (propertize "N" 'face '((:background "green" :foreground "black")))
       evil-emacs-state-tag    (propertize "E" 'face '((:background "orange" :foreground "black")))
@@ -42,7 +38,7 @@
                               (term-mode                    . emacs)
                               (bc-menu-mode                 . emacs)
                               (circe-server-mode            . emacs)
-                              (magit-branch-manager-mode    . emacs)
+                              ;;(magit-branch-manager-mode    . emacs)
                               (semantic-symref-results-mode . emacs)
                               (rdictcc-buffer-mode          . emacs)
                               (erc-mode                     . emacs))
@@ -54,12 +50,16 @@
 
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
   "K" 'magit-discard-item
-  "L" 'magit-key-mode-popup-logging)
+  "L" 'magit-key-mode-popup-logging
+  (kbd "C-f") 'evil-scroll-page-down
+  (kbd "C-b") 'evil-scroll-page-up)
 
 (evil-add-hjkl-bindings magit-status-mode-map 'emacs
   "K" 'magit-discard-item
   "l" 'magit-key-mode-popup-logging
-  "h" 'magit-toggle-diff-refine-hunk)
+  "h" 'magit-toggle-diff-refine-hunk
+  (kbd "C-d") 'evil-scroll-page-down
+  (kbd "C-u") 'evil-scroll-page-up)
 
 (evil-add-hjkl-bindings magit-log-mode-map 'emacs
   "K" 'magit-discard-item
@@ -68,32 +68,12 @@
 
 (evil-add-hjkl-bindings semantic-symref-results-mode)
 
-;;(add-to-list 'load-path "~/.emacs.d/evil-leader")
-;;(require 'evil-leader)
-
-;;(evil-leader/set-key "be" 'evil-show-files)
-;;(evil-leader/set-key "gs" 'magit-status)
-;;(evil-leader/set-key "gl" 'magit-log)
+(evil-add-hjkl-bindings magit-status-mode-map 'emacs
 
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-insert-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-replace-state-map (kbd "C-u") 'evil-scroll-page-up)
-
-;;; BS-menu
-(eval-after-load 'bs
-  '(progn
-     ;; use the standard bs bindings as a base
-     (evil-make-overriding-map bs-mode-map 'normal t)
-     (evil-define-key 'motion bs-mode-map
-       "h" 'evil-backward-char
-       "j" 'bs-down
-       "k" 'bs-up
-       "l" 'evil-forward-char)
-     )
-  )
-
-(evil-mode 1)
 
 ;;; esc quits
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
@@ -104,3 +84,5 @@
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+
+(evil-mode 1)
