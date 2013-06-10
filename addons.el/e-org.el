@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/org-mode/lisp")
+(require 'ox)
 (require 'org)
 (setq org-log-done 'time)
 (setq org-log-done 'note)
