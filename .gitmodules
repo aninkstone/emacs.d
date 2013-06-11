@@ -19,3 +19,6 @@
 [submodule "addons.gt/org-mode"]
 	path = addons.gt/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "addons.gt/mmm"]
+	path = addons.gt/mmm
+	url = https://github.com/purcell/mmm-mode.git
