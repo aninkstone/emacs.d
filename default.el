@@ -30,12 +30,12 @@
 (load-file "~/.emacs.d/addons.el/e-org.el")
 (load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
+(load-file "~/.emacs.d/addons.el/e-nxhtml.el")
 
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;(load-file "~/.emacs.d/addons.el/e-multi-term.el")
 ;;(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
-;;(load-file "~/.emacs.d/addons.el/e-nxhtml.el")
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)

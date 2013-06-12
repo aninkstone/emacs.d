@@ -22,3 +22,6 @@
 [submodule "addons.gt/mmm"]
 	path = addons.gt/mmm
 	url = https://github.com/purcell/mmm-mode.git
+[submodule "addons.gt/nxhtml"]
+	path = addons.gt/nxhtml
+	url = https://github.com/emacsmirror/nxhtml.git
