@@ -39,7 +39,7 @@
                               (bc-menu-mode                 . emacs)
                               (circe-server-mode            . emacs)
                               ;;(magit-branch-manager-mode    . emacs)
-                              (semantic-symref-results-mode . emacs)
+                              ;;(semantic-symref-results-mode . emacs)
                               (rdictcc-buffer-mode          . emacs)
                               (erc-mode                     . emacs))
                               ;;(bs-mode                      . emacs)
