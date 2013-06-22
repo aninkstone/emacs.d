@@ -31,6 +31,7 @@
 (load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-nxhtml.el")
+(load-file "~/.emacs.d/addons.el/e-emms.el")
 
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
@@ -51,6 +52,10 @@
               indent-tabs-mode t)
 (setq indent-line-function 'insert-tab)
 
+(setq tab-stop-list 
+      '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80
+	  84 88 92 96 100 104 108 112 116 120 124))
+
 (funcall (lambda ()
   ;;default variable setup
   ;;this function will call at end of this file
@@ -66,24 +71,20 @@
 ;;set fullscreen
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
-;;(if (display-graphic-p) (funcall (lambda () (
-;;  (set-frame-parameter
-;;   nil 'fullscreen
-;;   (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))))
-
+;;; Set up the auto-mode associations: -------------------------------
+;;--------------------------------------------------------------------
 (setq auto-mode-alist
-  (append
-    '(("\\.C$"    . c++-mode)
-      ("\\.H$"    . c++-mode)
-      ("\\.cc$"   . c++-mode)
-      ("\\.hh$"   . c++-mode)
-      ("\\.c$"    . c-mode)
-      ("\\.h$"    . c++-mode)
-      ("\\.ipp$"  . c++-mode)
-      ("\\.m$"    . objc-mode)
-      ("\\.java$" . java-mode)
-      ("\\.aidl$" . java-mode)
-     ) auto-mode-alist))
+   (append
+    '(("\\.cc$"   	           . c++-mode)
+	 ("\\.cpp$"  	           . c++-mode)
+	 ("\\.ipp$"  	           . c++-mode)
+	 ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
+    auto-mode-alist))
+
+;; Put this one at the front of the list to override the default
+;; c-mode association.
+(setq auto-mode-alist (cons (cons "\\.h$" 'c++-mode) auto-mode-alist))
+
 
 (defalias 'make 'compile)
 (defalias 'fnd  'find-name-dired)

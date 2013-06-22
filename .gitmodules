@@ -25,3 +25,6 @@
 [submodule "addons.gt/nxhtml"]
 	path = addons.gt/nxhtml
 	url = https://github.com/emacsmirror/nxhtml.git
+[submodule "addons.gt/emms"]
+	path = addons.gt/emms
+	url = git://git.sv.gnu.org/emms.git
