@@ -6,6 +6,8 @@
 (add-to-list 'load-path "~/.emacs.d/addons.st/highlight-symbol")
 (require 'highlight-symbol)
 
+(evil-mode 1)
+
 ;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
 (define-key evil-motion-state-map "\\be" 'evil-show-files)
@@ -38,15 +40,21 @@
                               (term-mode                    . emacs)
                               (bc-menu-mode                 . emacs)
                               (circe-server-mode            . emacs)
-                              ;;(magit-branch-manager-mode    . emacs)
-                              ;;(semantic-symref-results-mode . emacs)
                               (rdictcc-buffer-mode          . emacs)
+                              (cscope-list-entry-mode       . insert) ;;FIMXE: doesn't work
                               (erc-mode                     . emacs))
-                              ;;(bs-mode                      . emacs)
-                              ;;(erc-mode                     . normal)
       do (evil-set-initial-state mode state))
 
-;;(evil-add-hjkl-bindings *bc-menu-mode-map* 'emacs)
+                              ;;(magit-branch-manager-mode    . emacs)
+                              ;;(semantic-symref-results-mode . emacs)
+                              ;;(bs-mode                      . emacs)
+                              ;;(erc-mode                     . normal)
+
+
+(evil-add-hjkl-bindings cscope-list-entry-keymap 'emacs
+  "j" 'cscope-next-file
+  "k" 'cscope-prev-file
+  )
 
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
   "K" 'magit-discard-item
@@ -83,4 +91,3 @@
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
 
-(evil-mode 1)

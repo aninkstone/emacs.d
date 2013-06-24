@@ -2,6 +2,7 @@
 
 ;;;; this is the emacs config file
 (add-to-list 'load-path "~/.emacs.d/addons.el/")
+(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-appengine.el")
@@ -9,7 +10,6 @@
 (load-file "~/.emacs.d/addons.el/e-bs.el")
 (load-file "~/.emacs.d/addons.el/e-cedet.el")
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
-(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-diminish.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-fff.el")
