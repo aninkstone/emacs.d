@@ -75,6 +75,8 @@
   "h" 'magit-toggle-diff-refine-hunk)
 
 (evil-add-hjkl-bindings semantic-symref-results-mode)
+(define-key evil-normal-state-map "\C-]" 'semantic-symref)
+(define-key evil-normal-state-map "\C-[" 'semantic-ia-fast-jump)
 
 (define-key evil-normal-state-map  (kbd "C-u") 'evil-scroll-page-up)
 (define-key evil-visual-state-map  (kbd "C-u") 'evil-scroll-page-up)
@@ -90,4 +92,3 @@
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
-

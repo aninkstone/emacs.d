@@ -2,10 +2,7 @@
 
 ;;;; this is the emacs config file
 (add-to-list 'load-path "~/.emacs.d/addons.el/")
-(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
-(load-file "~/.emacs.d/addons.el/e-evil.el")
-(load-file "~/.emacs.d/addons.el/e-appengine.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
 (load-file "~/.emacs.d/addons.el/e-bs.el")
 (load-file "~/.emacs.d/addons.el/e-cedet.el")
@@ -33,6 +30,11 @@
 (load-file "~/.emacs.d/addons.el/e-nxhtml.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
+(load-file "~/.emacs.d/addons.el/e-cscope.el")
+(load-file "~/.emacs.d/addons.el/e-evil.el")
+
+;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
+
 
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 

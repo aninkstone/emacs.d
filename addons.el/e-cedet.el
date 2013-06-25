@@ -8,6 +8,3 @@
                                   global-semantic-mru-bookmark-mode))
 
 (semantic-mode t)
-
-(define-key evil-normal-state-map "\C-]" 'semantic-symref)
-(define-key evil-normal-state-map "\C-[" 'semantic-ia-fast-jump)
