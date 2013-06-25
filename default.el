@@ -50,8 +50,7 @@
 (setq-default tab-width 4)
 
 (setq-default c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode t)
+              tab-width 4)
 (setq indent-line-function 'insert-tab)
 
 (setq tab-stop-list 
