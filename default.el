@@ -94,3 +94,11 @@
 
 ;; Compilation output
 ;;(setq compilation-scroll-output t)
+
+
+;; 等宽字体设置
+;;(set-default-font "Ubuntu Mono:pixelsize=16") 
+;;(dolist (charset '(kana han symbol cjk-misc bopomofo)) 
+;;  (set-fontset-font (frame-parameter nil 'font) 
+;;                    charset 
+;;                    (font-spec :family "WenQuanYi Micro Hei" :size 16)))
