@@ -32,6 +32,7 @@
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 (load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
+(load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
