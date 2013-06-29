@@ -27,19 +27,16 @@
 (load-file "~/.emacs.d/addons.el/e-org.el")
 (load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
-(load-file "~/.emacs.d/addons.el/e-nxhtml.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 (load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
-
+(load-file "~/.emacs.d/addons.el/e-fringe-helper.el")
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-
+(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
-
-;;(load-file "~/.emacs.d/addons.el/e-multi-term.el")
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
@@ -103,3 +100,8 @@
 ;;  (set-fontset-font (frame-parameter nil 'font) 
 ;;                    charset 
 ;;                    (font-spec :family "WenQuanYi Micro Hei" :size 16)))
+
+(setq nxml-child-indent 4)  ;; work convention is 4 spaces for HTML, etc
+(setq nxml-outline-child-indent 4)
+(setq mumamo-submode-indent-offset 4)
+(setq sgml-basic-offset 4)
