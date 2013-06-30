@@ -105,3 +105,6 @@
 (setq nxml-outline-child-indent 4)
 (setq mumamo-submode-indent-offset 4)
 (setq sgml-basic-offset 4)
+
+;;show current time
+(display-time-mode 1)
