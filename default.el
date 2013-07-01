@@ -32,7 +32,6 @@
 (load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
-(load-file "~/.emacs.d/addons.el/e-fringe-helper.el")
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
