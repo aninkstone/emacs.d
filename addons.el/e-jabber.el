@@ -10,6 +10,9 @@
   '(("thatways.c@gmail.com" 
     (:network-server . "talk.google.com")
     (:connection-type . ssl))
+    ("thatway.c@gmail.com"
+    (:network-server . "talk.google.com")
+    (:connection-type . ssl))
     ("thatway.c@jabber.org" 
     (:network-server . "jabber.org")
     (:connection-type . ssl)))
