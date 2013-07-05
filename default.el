@@ -107,3 +107,11 @@
 
 ;;show current time
 (display-time-mode 1)
+
+(if (eq system-type "gnu/linux")
+    (if (display-graphic-p)
+        (progn (set-default-font "Ubuntu Mono:pixelsize=16") 
+               (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
+                 (set-fontset-font (frame-parameter nil 'font) 
+                                   charset 
+                                   (font-spec :family "WenQuanYi Micro Hei" :size 16))))))
