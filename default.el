@@ -1,12 +1,10 @@
-;;remap M-x
-
 ;;;; this is the emacs config file
 (add-to-list 'load-path "~/.emacs.d/addons.el/")
+(load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
 (load-file "~/.emacs.d/addons.el/e-bs.el")
 (load-file "~/.emacs.d/addons.el/e-cedet.el")
-(load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-diminish.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-fff.el")
@@ -83,23 +81,6 @@
 ;; c-mode association.
 (setq auto-mode-alist (cons (cons "\\.h$" 'c++-mode) auto-mode-alist))
 
-
-(defalias 'make 'compile)
-(defalias 'fnd  'find-name-dired)
-(defalias 'nu   'linum-mode)
-(defalias 'sb   'sr-speedbar-toggle)
-
-;; Compilation output
-;;(setq compilation-scroll-output t)
-
-
-;; 等宽字体设置
-;;(set-default-font "Ubuntu Mono:pixelsize=16") 
-;;(dolist (charset '(kana han symbol cjk-misc bopomofo)) 
-;;  (set-fontset-font (frame-parameter nil 'font) 
-;;                    charset 
-;;                    (font-spec :family "WenQuanYi Micro Hei" :size 16)))
-
 (setq nxml-child-indent 4)  ;; work convention is 4 spaces for HTML, etc
 (setq nxml-outline-child-indent 4)
 (setq mumamo-submode-indent-offset 4)
@@ -108,10 +89,32 @@
 ;;show current time
 (display-time-mode 1)
 
-(if (eq system-type "gnu/linux")
+;; set font on linux (ubuntu) 等宽字体设置
+(if (eq system-type 'gnu/linux)
     (if (display-graphic-p)
         (progn (set-default-font "Ubuntu Mono:pixelsize=16") 
                (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
                  (set-fontset-font (frame-parameter nil 'font) 
                                    charset 
                                    (font-spec :family "WenQuanYi Micro Hei" :size 16))))))
+
+;;(defun set-monospaced-font (frame)
+;;  (select-frame frame)
+;;  (if (window-system frame)
+;;      (if (eq system-type 'gnu/linux)
+;;          (progn (set-default-font "Ubuntu Mono:pixelsize=16") 
+;;                 (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
+;;                   (set-fontset-font (frame-parameter nil 'font) 
+;;                                     charset 
+;;                                     (font-spec :family "WenQuanYi Micro Hei" :size 16)))))))
+;;
+;;(add-hook 'after-make-frame-functions 'set-monospaced-font)
+
+
+(defalias 'make 'compile)
+(defalias 'fnd  'find-name-dired)
+(defalias 'nu   'linum-mode)
+(defalias 'sb   'sr-speedbar-toggle)
+
+;; Compilation output
+;;(setq compilation-scroll-output t)
