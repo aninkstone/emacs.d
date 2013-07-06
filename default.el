@@ -28,12 +28,14 @@
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 (load-file "~/.emacs.d/addons.el/e-cscope.el")
-(load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
+
+;;set fullscreen
+(set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
@@ -59,13 +61,10 @@
   ;;(setq-default tab-width nil)
   (global-auto-revert-mode nil)))
 
-(if (eq system-type "darwin")
+(if (eq system-type 'darwin)
     ;;append brew path
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
-
-;;set fullscreen
-(set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;;; Set up the auto-mode associations: -------------------------------
 ;;--------------------------------------------------------------------
