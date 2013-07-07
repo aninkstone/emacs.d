@@ -3,6 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/color-theme-tangotango")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/addons.gt/color-theme-tangotango")
 
+
 (if (eq system-type 'gnu/linux)
   (progn
     (load-theme 'tangotango)
