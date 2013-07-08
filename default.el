@@ -1,5 +1,4 @@
 ;;;; this is the emacs config file
-(add-to-list 'load-path "~/.emacs.d/addons.el/")
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
@@ -31,7 +30,7 @@
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
+;;(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;set fullscreen
