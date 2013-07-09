@@ -110,9 +110,9 @@
 
 
 (defalias 'make 'compile)
-(defalias 'fnd  'find-name-dired)
+(defalias 'fd   'find-name-dired)
 (defalias 'nu   'linum-mode)
-(defalias 'sb   'sr-speedbar-toggle)
+(defalias 'sr   'sr-speedbar-toggle)
 
 ;; Compilation output
 ;;(setq compilation-scroll-output t)
