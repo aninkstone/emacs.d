@@ -116,3 +116,6 @@
 
 ;; Compilation output
 ;;(setq compilation-scroll-output t)
+
+;;function to close all buffers
+(defun close-all-buffers () (interactive) (mapc 'kill-buffer (buffer-list)))
