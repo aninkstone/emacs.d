@@ -119,3 +119,6 @@
 
 ;;function to close all buffers
 (defun close-all-buffers () (interactive) (mapc 'kill-buffer (buffer-list)))
+
+;;auto reload if file modified by other editor
+;;(global-auto-revert-mode t)
