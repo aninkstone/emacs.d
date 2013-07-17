@@ -8,8 +8,6 @@
  "WuBi" "WuBi"
  "wubi")
 
-(if (< emacs-major-version 21)
-    (setup-chinese-gb-environment)
-  (set-language-environment 'Chinese-GB))
+;;(if (< emacs-major-version 21) (setup-chinese-gb-environment) (set-language-environment 'Chinese-GB))
 
 (setq default-input-method "chinese-wubi")
