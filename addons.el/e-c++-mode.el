@@ -6,11 +6,11 @@
 ;;             (local-set-key "." 'semantic-complete-self-insert)
 ;;             (local-set-key ">" 'semantic-complete-self-insert)))
 
-(add-hook 'c-mode-common-hook
+(add-hook 'c++-mode-hook
           '(lambda ()
-             ;;(local-set-key (kbd "TAB") 'semantic-ia-complete-symbol)
-             ;;(local-set-key (kbd "TAB") 'semantic-ia-complete-tip)
-             (local-set-key (kbd "TAB") 'semantic-ia-complete-symbol-menu)))
+             (local-set-key (kbd "TAB") 'semantic-ia-complete-symbol)))
+             ;;(local-set-key (kbd "TAB") 'semantic-ia-complete-tip)))
+             ;;(local-set-key (kbd "TAB") 'semantic-ia-complete-symbol-menu)))
 
 (setq hippie-expand-try-functions-list
       '(

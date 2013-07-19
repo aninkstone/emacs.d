@@ -2,6 +2,7 @@
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
+(load-file "~/.emacs.d/addons.el/e-c++-mode.el")
 (load-file "~/.emacs.d/addons.el/e-bs.el")
 (load-file "~/.emacs.d/addons.el/e-cedet.el")
 (load-file "~/.emacs.d/addons.el/e-diminish.el")
@@ -29,7 +30,6 @@
 (load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 (load-file "~/.emacs.d/addons.el/e-wubi.el")
-(load-file "~/.emacs.d/addons.el/e-c++-mode.el")
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
 ;;(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
