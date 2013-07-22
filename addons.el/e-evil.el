@@ -15,6 +15,10 @@
 (define-key evil-motion-state-map "\\gl" 'magit-log)
 (define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
 (define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
+(define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
+
+;;(defun evil-switch-recently-buffer 
+;;  (setq evil-mo))
 
 (setq evil-find-skip-newlines t)
 (setq evil-move-cursor-back nil evil-cross-lines t)
