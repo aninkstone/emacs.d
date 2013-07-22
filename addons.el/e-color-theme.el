@@ -10,5 +10,9 @@
 
 (defun mb/pick-color-theme (frame)
   (select-frame frame)
-  (if (window-system frame) (color-theme-tangotango) (tool-bar-mode -1)))
+  (if (window-system frame) 
+      (progn (color-theme-tangotango)
+             (tool-bar-mode -1)
+             (set-frame-parameter nil 'fullscreen 'fullboth))))
+
 (add-hook 'after-make-frame-functions 'mb/pick-color-theme)
