@@ -45,6 +45,7 @@
                               (bc-menu-mode                 . emacs)
                               (circe-server-mode            . emacs)
                               (rdictcc-buffer-mode          . emacs)
+                              (jabber-roster-mode           . emacs)
                               (cscope-list-entry-mode       . insert) ;;FIMXE: doesn't work
                               (erc-mode                     . emacs))
       do (evil-set-initial-state mode state))
