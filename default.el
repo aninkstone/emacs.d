@@ -6,7 +6,7 @@
 (load-file "~/.emacs.d/addons.el/e-bs.el")
 (load-file "~/.emacs.d/addons.el/e-cedet.el")
 (load-file "~/.emacs.d/addons.el/e-diminish.el")
-(load-file "~/.emacs.d/addons.el/e-evil.el")
+(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-fff.el")
 (load-file "~/.emacs.d/addons.el/e-goto-last-change.el")
 (load-file "~/.emacs.d/addons.el/e-highlight-symbol.el")
@@ -27,9 +27,10 @@
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
-(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 (load-file "~/.emacs.d/addons.el/e-wubi.el")
+(load-file "~/.emacs.d/addons.el/e-evil.el")
+
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
 ;;(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))

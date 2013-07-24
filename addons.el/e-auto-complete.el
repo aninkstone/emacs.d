@@ -30,3 +30,7 @@
 ;;                                 (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
 ;;                                 ))
 
+(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-0.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-format-0.1.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
+(require 'fuzzy)

@@ -6,8 +6,6 @@
 (add-to-list 'load-path "~/.emacs.d/addons.st/highlight-symbol")
 (require 'highlight-symbol)
 
-(evil-mode 1)
-
 ;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
 (define-key evil-motion-state-map "\\be" 'evil-show-files)
@@ -46,7 +44,7 @@
                               (circe-server-mode            . emacs)
                               (rdictcc-buffer-mode          . emacs)
                               (jabber-roster-mode           . emacs)
-                              (cscope-list-entry-mode       . insert) ;;FIMXE: doesn't work
+                              (cscope-list-entry-mode       . emacs) ;;FIMXE: doesn't work
                               (erc-mode                     . emacs))
       do (evil-set-initial-state mode state))
 
@@ -97,3 +95,5 @@
 (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+
+(evil-mode 1)
