@@ -30,6 +30,7 @@
 (load-file "~/.emacs.d/addons.el/e-wubi.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-etags.el")
+(load-file "~/.emacs.d/addons.el/e-dired.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
