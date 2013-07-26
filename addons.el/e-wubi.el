@@ -11,3 +11,5 @@
 ;;(if (< emacs-major-version 21) (setup-chinese-gb-environment) (set-language-environment 'Chinese-GB))
 
 (setq default-input-method "chinese-wubi")
+
+(define-key global-map (kbd "\C-\\ TAB") 'toggle-input-method)
