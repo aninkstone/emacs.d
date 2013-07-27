@@ -1,4 +1,5 @@
 ;;;; this is the emacs config file
+(load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
@@ -28,7 +29,6 @@
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 (load-file "~/.emacs.d/addons.el/e-wubi.el")
-(load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-etags.el")
 (load-file "~/.emacs.d/addons.el/e-dired.el")
 
@@ -127,3 +127,5 @@
 
 ;;auto reload if file modified by other editor
 ;;(global-auto-revert-mode t)
+
+(setq user-full-name "sDond")
