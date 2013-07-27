@@ -76,6 +76,7 @@
     '(("\\.cc$"   	           . c++-mode)
 	 ("\\.cpp$"  	           . c++-mode)
 	 ("\\.ipp$"  	           . c++-mode)
+	 ("\\.hpp$"  	           . c++-mode)
 	 ("\\.h[r]?[0-9]*[a-z]?$"  . c++-mode))
     auto-mode-alist))
 
