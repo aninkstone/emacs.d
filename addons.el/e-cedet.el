@@ -13,7 +13,7 @@
 	global-semantic-idle-summary-mode
 	global-semantic-mru-bookmark-mode
 	global-semantic-show-parser-state-mode
-	;(global-semantic-show-unmatched-syntax-mode)
+	global-semantic-show-unmatched-syntax-mode
 	global-semantic-stickyfunc-mode
 	global-semanticdb-minor-mode))
 
