@@ -1,8 +1,8 @@
 ;;;; this is the emacs config file
+(load-file "~/.emacs.d/addons.el/e-cedet.el")
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
-(load-file "~/.emacs.d/addons.el/e-cedet.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
 (load-file "~/.emacs.d/addons.el/e-c++-mode.el")
 (load-file "~/.emacs.d/addons.el/e-bs.el")
