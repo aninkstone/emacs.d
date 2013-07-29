@@ -8,7 +8,8 @@
 
 ;;disable evil default leader map
 (define-key evil-motion-state-map "\\" nil)
-(define-key evil-motion-state-map "\\be" 'evil-show-files)
+;;(define-key evil-motion-state-map "\\be" 'evil-show-files)
+(define-key evil-motion-state-map "\\be" 'buffer-menu)
 (define-key evil-motion-state-map "\\gs" 'magit-status)
 (define-key evil-motion-state-map "\\gl" 'magit-log)
 (define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
