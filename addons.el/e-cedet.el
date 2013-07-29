@@ -1,6 +1,9 @@
 ;;cedet mode
 (require 'cedet) 
-(require 'ede)
+;;(require 'ede)
+;;(require 'cedet-semantic-settings)
+;;(require 'cedet-speedbar-settings)
+;;(global-srecode-minor-mode 1)
 
 (setq semantic-default-submodes
       '(global-semantic-decoration-mode
