@@ -25,3 +25,6 @@
 [submodule "addons.gt/emms"]
 	path = addons.gt/emms
 	url = git://git.sv.gnu.org/emms.git
+[submodule "addons.gt/calfw"]
+	path = addons.gt/calfw
+	url = https://github.com/kiwanami/emacs-calfw.git
