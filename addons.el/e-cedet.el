@@ -2,8 +2,7 @@
 (require 'cedet)
 
 (setq semantic-default-submodes
-      '(global-semantic-decoration-mode
-        global-semantic-highlight-edits-mode
+      '(global-semantic-highlight-edits-mode
         global-semantic-highlight-func-mode
         global-semantic-idle-breadcrumbs-mode
         global-semantic-idle-completions-mode
@@ -15,6 +14,7 @@
         global-semantic-show-unmatched-syntax-mode
         global-semantic-stickyfunc-mode
         global-semanticdb-minor-mode))
+        ;;global-semantic-decoration-mode))
 
 (require 'semantic/ia)
 (require 'semantic/bovine/gcc)
