@@ -28,3 +28,6 @@
 [submodule "addons.gt/calfw"]
 	path = addons.gt/calfw
 	url = https://github.com/kiwanami/emacs-calfw.git
+[submodule "addons.gt/el-get"]
+	path = addons.gt/el-get
+	url = https://github.com/emacsmirror/el-get.git
