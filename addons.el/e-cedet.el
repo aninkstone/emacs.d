@@ -35,16 +35,10 @@
 ;;  (semantic-load-enable-primary-exuberent-ctags-support))
 
 ;; CC-mode
-(add-hook 'c-mode-hook '(lambda ()
+(add-hook 'c-mode-common-hook '(lambda ()
 			  (setq ac-sources (append '(ac-source-semantic) ac-sources))
 			  (local-set-key (kbd "RET") 'newline-and-indent)
-			  (linum-mode t)))
-			  ;;(semantic-mode t)))
+			  (linum-mode t)
+			  (semantic-mode t)))
 
-(add-hook 'c++-mode-hook '(lambda ()
-			  (setq ac-sources (append '(ac-source-semantic) ac-sources))
-			  (local-set-key (kbd "RET") 'newline-and-indent)
-			  (linum-mode t)))
-			  ;;(semantic-mode t)))
-
-(semantic-mode 1)
+;;(semantic-mode 1)
