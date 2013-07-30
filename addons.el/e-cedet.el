@@ -1,14 +1,6 @@
 ;;cedet mode
 (require 'cedet)
 
-(semantic-mode 1)
-
-;;(require 'cedet) 
-;;(require 'ede)
-;;(require 'cedet-semantic-settings)
-;;(require 'cedet-speedbar-settings)
-;;(global-srecode-minor-mode 1)
-
 (setq semantic-default-submodes
       '(global-semantic-decoration-mode
         global-semantic-highlight-edits-mode
@@ -54,3 +46,5 @@
 			  (local-set-key (kbd "RET") 'newline-and-indent)
 			  (linum-mode t)))
 			  ;;(semantic-mode t)))
+
+(semantic-mode 1)
