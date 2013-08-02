@@ -45,6 +45,11 @@
                               (circe-server-mode            . emacs)
                               (rdictcc-buffer-mode          . emacs)
                               (jabber-roster-mode           . emacs)
+                              (weibo-timeline-mode          . emacs)
+                              (weibo-user-mode              . emacs)
+                              (weibo-image-mode             . emacs)
+                              (weibo-post-mode              . emacs)
+                              ;;(org-mode                     . emacs)
                               (cscope-list-entry-mode       . emacs) ;;FIMXE: doesn't work
                               (erc-mode                     . emacs))
       do (evil-set-initial-state mode state))
