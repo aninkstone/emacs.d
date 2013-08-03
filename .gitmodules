@@ -9,7 +9,7 @@
 	url = https://github.com/magit/magit.git
 [submodule "addons.gt/color-theme-tangotango"]
 	path = addons.gt/color-theme-tangotango
-	url = https://github.com/juba/color-theme-tangotango.git
+    url = https://github.com/thatways/color-theme-tangotango.git
 [submodule "addons.gt/cl-lib"]
 	path = addons.gt/cl-lib
 	url = https://github.com/emacsmirror/cl-lib.git

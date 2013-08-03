@@ -129,4 +129,9 @@
 ;;auto reload if file modified by other editor
 ;;(global-auto-revert-mode t)
 
-(setq user-full-name "sDond")
+(setq user-full-name "D")
+
+;;right-only
+;;(set-fringe-mode '(0 . 1))
+;;no-fringe
+;;(set-fringe-mode '(0 . 0))
