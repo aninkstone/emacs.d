@@ -31,3 +31,6 @@
 [submodule "addons.gt/el-get"]
 	path = addons.gt/el-get
 	url = https://github.com/emacsmirror/el-get.git
+[submodule "addons.gt/google-translate.git"]
+	path = addons.gt/google-translate.git
+	url = https://github.com/manzyuk/google-translate.git
