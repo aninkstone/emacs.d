@@ -33,6 +33,7 @@
 (load-file "~/.emacs.d/addons.el/e-dired.el")
 (load-file "~/.emacs.d/addons.el/e-el-get.el")
 (load-file "~/.emacs.d/addons.el/e-google-translate.el")
+(load-file "~/.emacs.d/addons.el/e-gnus.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
@@ -136,3 +137,5 @@
 ;;(set-fringe-mode '(0 . 1))
 ;;no-fringe
 ;;(set-fringe-mode '(0 . 0))
+
+;;(setq tramp-default-method "ssh")
