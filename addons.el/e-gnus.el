@@ -156,24 +156,26 @@
 ;;          "nnmaildir+Gmail:inbox")))                 ;邮件归档
 
 ;;gnus pop mail setting
-(setq mail-sources
-      '((pop :server "mail.pset.suntec.net"
-             :port 110
-             :user "chenzp@pset.suntec.net"
-             ;;:password "******"
-             :stream starttls)))
+;;(setq gnus-select-method '(nnimap "gmail"
+;;                                  (nnimap-address "imap.gmail.com") ;imap.googlemail.com
+;;                                  (nnimap-server-port 993)
+;;                                  (nnimap-stream ssl)))
 
-(setq gnus-select-method '(nnml ""))
-
-(setq send-mail-function 'smtpmail-send-it)                                            ; if you use `mail'
-    (setq message-send-mail-function 'smtpmail-send-it)                                ;if you use message/Gnus
-    (setq smtpmail-default-smtp-server "mail.pset.suntec.net")                         ;set before loading library
-    (setq smtpmail-local-domain "pset.suntec.net")
-    (setq smtpmail-sendto-domain "pset.suntec.net")
-    (setq smtpmail-debug-info t)                                                       ;only to debug problems
-    (setq smtpmail-auth-credentials '(("pset.suntec.net" 25 "chenzp" nil)))            ;or use ~/.authinfo [nil] could be password
-
-    ;;(setq smtpmail-starttls-credentials
-    ;;      '(("pset.suntec.net" 25 "~/.my_smtp_tls.key" "~/.my_smtp_tls.cert")))
-
-(setq user-mail-address "chenzp@pset.suntec.net") 
+;;(setq mail-sources
+;;      '((pop :server "mail.pset.suntec.net"
+;;             :port 110
+;;             :user "chenzp@pset.suntec.net"
+;;             ;;:password "******"
+;;             :stream starttls)))
+;;
+;;(setq gnus-select-method '(nnml ""))
+;;
+;;(setq send-mail-function 'smtpmail-send-it)
+;;    (setq message-send-mail-function 'smtpmail-send-it)
+;;    (setq smtpmail-default-smtp-server "mail.pset.suntec.net")
+;;    (setq smtpmail-local-domain "pset.suntec.net")
+;;    (setq smtpmail-sendto-domain "pset.suntec.net")
+;;    (setq smtpmail-debug-info t)
+;;    (setq smtpmail-auth-credentials '(("pset.suntec.net" 25 "chenzp" nil)))
+;;
+;;(setq user-mail-address "chenzp@pset.suntec.net") 
