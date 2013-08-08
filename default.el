@@ -34,6 +34,7 @@
 (load-file "~/.emacs.d/addons.el/e-el-get.el")
 (load-file "~/.emacs.d/addons.el/e-google-translate.el")
 (load-file "~/.emacs.d/addons.el/e-gnus.el")
+(load-file "~/.emacs.d/addons.el/e-markdown.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 

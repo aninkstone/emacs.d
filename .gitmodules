@@ -34,3 +34,6 @@
 [submodule "addons.gt/google-translate.git"]
 	path = addons.gt/google-translate.git
 	url = https://github.com/manzyuk/google-translate.git
+[submodule "addons.gt/markdown-mode"]
+	path = addons.gt/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
