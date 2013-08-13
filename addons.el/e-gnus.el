@@ -156,10 +156,10 @@
 ;;          "nnmaildir+Gmail:inbox")))                 ;邮件归档
 
 ;;gnus pop mail setting
-;;(setq gnus-select-method '(nnimap "gmail"
-;;                                  (nnimap-address "imap.gmail.com") ;imap.googlemail.com
-;;                                  (nnimap-server-port 993)
-;;                                  (nnimap-stream ssl)))
+(setq gnus-select-method '(nnimap "gmail"
+                                  (nnimap-address "imap.gmail.com") ;imap.googlemail.com
+                                  (nnimap-server-port 993)
+                                  (nnimap-stream ssl)))
 
 ;;(setq mail-sources
 ;;      '((pop :server "mail.pset.suntec.net"
