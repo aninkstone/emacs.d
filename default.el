@@ -36,7 +36,7 @@
 (load-file "~/.emacs.d/addons.el/e-markdown.el")
 
 (if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-(if (eq system-type "darwin")   (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+(if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
