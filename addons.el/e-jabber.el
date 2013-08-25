@@ -1,6 +1,6 @@
-;;================================================
+;;========================================================
 ;; JABBER
-;;================================================
+;;========================================================
 (add-to-list 'load-path "~/.emacs.d/elpa/jabber-0.8.90")
 (require 'jabber)
 (require 'jabber-autoloads)
@@ -8,9 +8,6 @@
 
 (setq jabber-account-list
   '(("thatways.c@gmail.com" 
-    (:network-server . "talk.google.com")
-    (:connection-type . ssl))
-    ("thatway.c@gmail.com"
     (:network-server . "talk.google.com")
     (:connection-type . ssl))
     ("thatway.c@jabber.org" 
