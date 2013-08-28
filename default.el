@@ -37,10 +37,11 @@
 
 (if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 (if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
+(if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;set fullscreen
