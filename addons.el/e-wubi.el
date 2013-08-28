@@ -12,4 +12,4 @@
 
 (setq default-input-method "chinese-wubi")
 
-(define-key global-map (kbd "\C-\\ TAB") 'toggle-input-method)
+(define-key global-map (kbd "C-`") 'toggle-input-method)
