@@ -37,3 +37,6 @@
 [submodule "addons.gt/markdown-mode"]
 	path = addons.gt/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule "addons.gt/git-modes"]
+	path = addons.gt/git-modes
+	url = https://github.com/magit/git-modes.git
