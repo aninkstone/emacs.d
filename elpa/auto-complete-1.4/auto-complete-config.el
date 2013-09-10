@@ -474,10 +474,11 @@
   )
 
 (defun ac-emacs-lisp-mode-setup ()
-  (setq ac-sources (append '(ac-source-features ac-source-functions ac-source-yasnippet ac-source-variables ac-source-symbols) ac-sources)))
+  (setq ac-sources (append '(ac-source-features ac-source-functions ac-source-variables ac-source-symbols) ac-sources)))
 
 (defun ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-filename ac-source-yasnippet ac-source-gtags ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers) ac-sources)))
+  ;;(setq ac-sources (append '(ac-source-filename ac-source-yasnippet ac-source-gtags ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers) ac-sources)))
+  (setq ac-sources (append '(ac-source-filename ac-source-gtags ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers) ac-sources)))
 
 (defun ac-ruby-mode-setup ())
 

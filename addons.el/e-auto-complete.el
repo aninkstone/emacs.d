@@ -12,3 +12,5 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-format-0.1.1")
 (add-to-list 'load-path "~/.emacs.d/elpa/fuzzy-match-1.4")
 (require 'fuzzy)
+
+(add-hook 'c-mode-common-hook '(lambda () (local-set-key (kbd "TAB") 'ac-fuzzy-complete)))

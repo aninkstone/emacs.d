@@ -28,7 +28,7 @@
 ;;(semantic-mode 1)
 
 (setq semantic-default-submodes '(global-semantic-highlight-edits-mode
-                                  global-semantic-highlight-func-mode
+                                  ;;global-semantic-highlight-func-mode
                                   global-semantic-idle-breadcrumbs-mode
                                   global-semantic-idle-completions-mode
                                   global-semantic-idle-local-symbol-highlight-mode
@@ -65,7 +65,6 @@
                                  (setq ac-sources (append '(ac-source-semantic) ac-sources))
                                  (local-set-key (kbd "RET") 'newline-and-indent)
                                  (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
-                                 (linum-mode t)
                                  (semantic-mode t)))
 
 
