@@ -45,7 +45,7 @@
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;set fullscreen
-;;(set-frame-parameter nil 'fullscreen 'fullboth)
+(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
@@ -144,4 +144,4 @@
 
 ;;(setq tramp-default-method "ssh")
 
-(if window-system (tool-bar-mode nil))
+;;(if window-system (tool-bar-mode nil))
