@@ -37,34 +37,35 @@
 
 ;;Capture Templates
 
-(setq org-directory "~/.emacs.d/org-git")
-(setq org-default-notes-file "~/.emacs.d/org-git/refile.org")
-
-;; I use C-M-r to start capture mode
-(global-set-key (kbd "C-M-r") 'org-capture)
-;; I use C-c r to start capture mode when using SSH from my Android phone
-(global-set-key (kbd "C-c r") 'org-capture)
-
-;; Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
-(setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/.emacs.d/org-git/refile.org")
-               "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/.emacs.d/org-git/refile.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~/.emacs.d/org-git/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("j" "Journal" entry (file+datetree "~/.emacs.d/org-git/diary.org")
-               "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("w" "org-protocol" entry (file "~/.emacs.d/org-git/refile.org")
-               "* TODO Review %c\n%U\n" :immediate-finish t)
-              ("p" "Phone call" entry (file "~/.emacs.d/org-git/refile.org")
-               "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-              ("h" "Habit" entry (file "~/.emacs.d/org-git/refile.org")
-               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
-
 ;;=======================================================================================
-;;setup refile
+;;org-mode setup refile
 ;;=======================================================================================
+
+;;(setq org-directory "~/.emacs.d/org-git")
+;;(setq org-default-notes-file "~/.emacs.d/org-git/refile.org")
+;;
+;;;; I use C-M-r to start capture mode
+;;(global-set-key (kbd "C-M-r") 'org-capture)
+;;;; I use C-c r to start capture mode when using SSH from my Android phone
+;;(global-set-key (kbd "C-c r") 'org-capture)
+;;
+;;;; Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
+;;(setq org-capture-templates
+;;      (quote (("t" "todo" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+;;              ("r" "respond" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
+;;              ("n" "note" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+;;              ("j" "Journal" entry (file+datetree "~/.emacs.d/org-git/diary.org")
+;;               "* %?\n%U\n" :clock-in t :clock-resume t)
+;;              ("w" "org-protocol" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* TODO Review %c\n%U\n" :immediate-finish t)
+;;              ("p" "Phone call" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
+;;              ("h" "Habit" entry (file "~/.emacs.d/org-git/refile.org")
+;;               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
