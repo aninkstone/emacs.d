@@ -67,9 +67,9 @@
 (funcall (lambda ()
   ;;default variable setup
   ;;this function will call at end of this file
-  (setq make-backup-files nil)
+  (setq make-backup-files 0)
   ;;(setq-default tab-width nil)
-  (global-auto-revert-mode nil)))
+  (global-auto-revert-mode 0)))
 
 (if (eq system-type "darwin")
     ;;append brew path
