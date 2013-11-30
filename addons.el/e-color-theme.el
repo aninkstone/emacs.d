@@ -10,6 +10,7 @@
 (if (eq system-type 'gnu/linux) (if window-system (color-theme-tangotango)))
 (if (eq system-type 'darwin) (if window-system (color-theme-tangotango)))
 (if (eq system-type 'windows-nt) (if window-system (color-theme-tangotango)))
+(if (eq system-type 'cygwin) (if window-system (color-theme-tangotango)))
 ;;(color-theme-tangotango)
 
 (if (eq system-type 'windows-nt)
