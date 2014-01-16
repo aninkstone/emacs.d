@@ -103,3 +103,8 @@
 (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
 
 (evil-mode 1)
+
+
+(add-to-list 'load-path "~/.emacs.d/addons.gt/evil-matchit") ;
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
