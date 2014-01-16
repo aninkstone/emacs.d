@@ -40,3 +40,6 @@
 [submodule "addons.gt/git-modes"]
 	path = addons.gt/git-modes
 	url = https://github.com/magit/git-modes.git
+[submodule "addons.gt/evil-matchit"]
+	path = addons.gt/evil-matchit
+	url = https://github.com/redguardtoo/evil-matchit.git
