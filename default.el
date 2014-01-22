@@ -68,6 +68,7 @@
   ;;default variable setup
   ;;this function will call at end of this file
   (setq make-backup-files 0)
+  (setq make-backup-files nil)
   ;;(setq-default tab-width nil)
   (global-auto-revert-mode 0)))
 
