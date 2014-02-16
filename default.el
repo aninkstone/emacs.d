@@ -21,8 +21,8 @@
 (load-file "~/.emacs.d/addons.el/e-ahs.el")
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
 (load-file "~/.emacs.d/addons.el/e-anything.el")
-;;(load-file "~/.emacs.d/addons.el/e-org.el")
-;;(load-file "~/.emacs.d/addons.el/e-ido.el")
+(load-file "~/.emacs.d/addons.el/e-org.el")
+(load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
@@ -45,7 +45,7 @@
 (if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;set fullscreen
-(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
+;;(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
@@ -148,3 +148,8 @@
 ;;(setq tramp-default-method "ssh")
 
 ;;(if window-system (tool-bar-mode nil))
+
+;;Intent setup
+(defun long-arguments-indent-setup () (c-set-offset 'arglist-intro '+))
+(add-hook 'c-mode-hook 'long-arguments-indent-setup)
+(add-hook 'c++-mode-hook 'long-arguments-indent-setup)
