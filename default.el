@@ -49,6 +49,7 @@
 
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
+(define-key global-map (kbd "\C-\\ r") 'rgrep)
 (global-set-key (kbd "C-;") ctl-x-map)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
@@ -153,3 +154,4 @@
 (defun long-arguments-indent-setup () (c-set-offset 'arglist-intro '+))
 (add-hook 'c-mode-hook 'long-arguments-indent-setup)
 (add-hook 'c++-mode-hook 'long-arguments-indent-setup)
+
