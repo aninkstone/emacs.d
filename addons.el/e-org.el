@@ -13,6 +13,8 @@
 ;;(setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
 (global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -47,7 +49,9 @@
 ;;=======================================================================================
 
 (setq org-directory "~/Documents/orgs")
-(setq org-default-notes-file "~/Documents/orgs/refile.org")
+;;(setq org-default-notes-file "~/Documents/orgs/refile.org")
+(setq org-agenda-files (list "~/Documents/orgs/jobs.org"
+                             "~/Documents/orgs/refile.org"))
 
 ;; I use C-M-r to start capture mode
 (global-set-key (kbd "C-M-r") 'org-capture)
@@ -72,8 +76,7 @@
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
-(setq org-refile-targets (quote ((nil :maxlevel . 9)
-                                 (org-agenda-files :maxlevel . 9))))
+(setq org-refile-targets (quote ((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))))
 
 ; Use full outline paths for refile targets - we file directly with IDO
 (setq org-refile-use-outline-path t)
@@ -86,12 +89,12 @@
 
 ; Use IDO for both buffer and file completion and ido-everywhere to t
 (setq org-completion-use-ido t)
-(setq ido-everywhere t)
-(setq ido-max-directory-size 100000)
+;;(setq ido-everywhere t)
+;;(setq ido-max-directory-size 100000)
 (ido-mode (quote both))
 ; Use the current window when visiting files and buffers with ido
-(setq ido-default-file-method 'selected-window)
-(setq ido-default-buffer-method 'selected-window)
+;;(setq ido-default-file-method 'selected-window)
+;;(setq ido-default-buffer-method 'selected-window)
 
 ;;;; Refile settings
 ; Exclude DONE state tasks from refile targets
