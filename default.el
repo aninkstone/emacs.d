@@ -22,7 +22,7 @@
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
 (load-file "~/.emacs.d/addons.el/e-anything.el")
 (load-file "~/.emacs.d/addons.el/e-org.el")
-(load-file "~/.emacs.d/addons.el/e-ido.el")
+;;(load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
