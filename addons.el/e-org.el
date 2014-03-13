@@ -18,7 +18,7 @@
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" ))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
@@ -27,7 +27,6 @@
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "forest green" :weight bold))))
-;;              ("PHONE" :foreground "forest green" :weight bold))))
 
 ;;Fast Todo Selection
 (setq org-use-fast-todo-selection t)
@@ -48,32 +47,24 @@
 ;;org-mode setup refile
 ;;=======================================================================================
 
-(setq org-directory "~/Documents/orgs")
-(setq org-default-notes-file "~/Documents/orgs/note.org")
-(setq org-agenda-files (list "~/Documents/orgs/jobs.org"
-                             "~/Documents/orgs/refile.org"))
+;;(if (boundp 'org-directory)
+;;    (message "Set org-directory to ~/Documents/orgs")
+;;  (setq org-directory "~/Documents/orgs"))
 
-;; I use C-M-r to start capture mode
-(global-set-key (kbd "C-M-r") 'org-capture)
+(setq org-default-notes-file (concat org-directory "/note.org"))
+(setq org-agenda-files (list (concat org-directory "/jobs.org")
+                             (concat org-directory "/note.org")
+                             (concat org-directory "/refe.org")))
+
 ;; I use C-c r to start capture mode when using SSH from my Android phone
 (global-set-key (kbd "C-c r") 'org-capture)
 
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/Documents/orgs/refile.org")
+      (quote (("t" "todo" entry (file (concat org-directory "/jobs.org"))
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/Documents/orgs/refile.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~/Documents/orgs/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("j" "Journal" entry (file+datetree "~/Documents/orgs/diary.org")
-               "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("w" "org-protocol" entry (file "~/Documents/orgs/refile.org")
-               "* TODO Review %c\n%U\n" :immediate-finish t)
-              ("p" "Phone call" entry (file "~/Documents/orgs/refile.org")
-               "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-              ("h" "Habit" entry (file "~/Documents/orgs/refile.org")
-               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+              ("n" "note" entry (file (concat org-directory "/refe.org"))
+               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t))))
 
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))))
