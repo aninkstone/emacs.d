@@ -1,12 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/org-mode/lisp")
+(require 'ox)
+(require 'ob)
+(require 'org)
 
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (setq org-log-done 'time)
 (setq org-log-done 'note)
-
-(require 'ox)
-(require 'ob)
-(require 'org)
 
 (org-indent-mode 1)
 (setq org-use-fast-todo-selection t)
