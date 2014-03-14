@@ -108,3 +108,6 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/evil-matchit") ;
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
+
+(load-file "~/.emacs.d/addons.el/evil-search-improve.el")
+(define-key evil-motion-state-map "*" 'evil-search-symbol-forward)

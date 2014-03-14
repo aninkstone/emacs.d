@@ -78,7 +78,7 @@
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
 
-(load-file "~/.emacs.d/addons.el/e-w3m.el")
+;;(load-file "~/.emacs.d/addons.el/e-w3m.el")
 
 ;;; Set up the auto-mode associations: -------------------------------
 ;;--------------------------------------------------------------------
@@ -147,7 +147,6 @@
 ;;(set-fringe-mode '(0 . 0))
 
 ;;(setq tramp-default-method "ssh")
-
 ;;(if window-system (tool-bar-mode nil))
 
 ;;Intent setup
