@@ -22,7 +22,7 @@
 
 ;;Helm key map
 ;;helm-do-grep
-(define-key evil-motion-state-map "\\hg" 'helm-do-grep)
+(define-key evil-motion-state-map "\\at" 'anything-do-grep)
 
 ;;(defun evil-switch-recently-buffer 
 ;;  (setq evil-mo))
