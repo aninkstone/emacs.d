@@ -1,12 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/org-mode/lisp")
+(require 'ox)
+(require 'ob)
+(require 'org)
 
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
 (setq org-log-done 'time)
 (setq org-log-done 'note)
-
-(require 'ox)
-(require 'ob)
-(require 'org)
 
 (org-indent-mode 1)
 (setq org-use-fast-todo-selection t)
@@ -19,7 +18,7 @@
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" ))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
@@ -28,7 +27,6 @@
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "forest green" :weight bold))))
-;;              ("PHONE" :foreground "forest green" :weight bold))))
 
 ;;Fast Todo Selection
 (setq org-use-fast-todo-selection t)
@@ -49,25 +47,24 @@
 ;;org-mode setup refile
 ;;=======================================================================================
 
-(setq org-directory "~/Documents/orgs")
-(setq org-default-notes-file "~/Documents/orgs/note.org")
-(setq org-agenda-files (list "~/Documents/orgs/jobs.org"
-                             "~/Documents/orgs/meeting.org"
-                             "~/Documents/orgs/refile.org"))
+;;(if (boundp 'org-directory)
+;;    (message "Set org-directory to ~/Documents/orgs")
+;;  (setq org-directory "~/Documents/orgs"))
+
+(setq org-default-notes-file (concat org-directory "/note.org"))
+(setq org-agenda-files (list (concat org-directory "/jobs.org")
+                             (concat org-directory "/note.org")
+                             (concat org-directory "/refe.org")))
 
 ;; I use C-c r to start capture mode when using SSH from my Android phone
 (global-set-key (kbd "C-c r") 'org-capture)
 
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, and org-protocol
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/Documents/orgs/refile.org")
+      (quote (("t" "todo" entry (file (concat org-directory "/jobs.org"))
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/Documents/orgs/refile.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~/Documents/orgs/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("m" "meeting" entry (file "~/Documents/orgs/meeting.org") 
-               "* TODO %?\n%U\n:START:\n:END:\n"))))
+              ("n" "note" entry (file (concat org-directory "/refe.org"))
+               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t))))
 
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
 (setq org-refile-targets (quote ((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))))

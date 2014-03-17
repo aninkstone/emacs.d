@@ -10,11 +10,19 @@
 (define-key evil-motion-state-map "\\" nil)
 (define-key evil-motion-state-map "\\be" 'evil-show-files)
 ;;(define-key evil-motion-state-map "\\be" 'buffer-menu)
-(define-key evil-motion-state-map "\\gs" 'magit-status)
-(define-key evil-motion-state-map "\\gl" 'magit-log)
+(define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
+
+;;Hightlight symbol
 (define-key evil-motion-state-map "\\m" 'highlight-symbol-at-point)
 (define-key evil-motion-state-map "\\n" 'highlight-symbol-remove-all)
-(define-key evil-motion-state-map (kbd "C-6") 'evil-buffer)
+
+;;Magit key map
+(define-key evil-motion-state-map "\\gs" 'magit-status)
+(define-key evil-motion-state-map "\\gl" 'magit-log)
+
+;;Helm key map
+;;helm-do-grep
+(define-key evil-motion-state-map "\\at" 'anything-do-grep)
 
 ;;(defun evil-switch-recently-buffer 
 ;;  (setq evil-mo))
@@ -108,3 +116,6 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/evil-matchit") ;
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
+
+(load-file "~/.emacs.d/addons.el/evil-search-improve.el")
+(define-key evil-motion-state-map "*" 'evil-search-symbol-forward)
