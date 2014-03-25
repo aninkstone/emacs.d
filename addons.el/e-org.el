@@ -63,7 +63,7 @@
 (setq org-capture-templates
       (quote (("t" "todo" entry (file (concat org-directory "/jobs.org"))
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("n" "note" entry (file (concat org-directory "/refe.org"))
+              ("n" "note" entry (file (concat org-directory "/note.org"))
                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t))))
 
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
