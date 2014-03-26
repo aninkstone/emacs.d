@@ -53,8 +53,7 @@
 
 (setq org-default-notes-file (concat org-directory "/note.org"))
 (setq org-agenda-files (list (concat org-directory "/jobs.org")
-                             (concat org-directory "/note.org")
-                             (concat org-directory "/refe.org")))
+                             (concat org-directory "/note.org")))
 
 ;; I use C-c r to start capture mode when using SSH from my Android phone
 (global-set-key (kbd "C-c r") 'org-capture)
