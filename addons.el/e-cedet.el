@@ -50,12 +50,12 @@
 ;;
 (setq semantic-default-submodes '(global-semantic-highlight-edits-mode
                                   global-semantic-idle-scheduler-mode
-                                  ;;global-semantic-highlight-func-mode
                                   global-semantic-idle-breadcrumbs-mode
                                   global-semantic-idle-completions-mode
+                                  ;;global-semantic-highlight-func-mode
                                   ;;global-semantic-idle-local-symbol-highlight-mode
                                   ;;global-semantic-idle-summary-mode
-                                  global-semantic-mru-bookmark-mode
+                                  ;;global-semantic-mru-bookmark-mode
                                   global-semantic-show-parser-state-mode
                                   global-semantic-show-unmatched-syntax-mode
                                   global-semantic-stickyfunc-mode
