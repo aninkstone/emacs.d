@@ -7,7 +7,8 @@
 (setq org-log-done 'time)
 (setq org-log-done 'note)
 
-(org-indent-mode 1)
+;;(org-indent-mode 1)
+
 (setq org-use-fast-todo-selection t)
 (setq org-agenda-include-diary t)
 ;;(setq org-treat-S-cursor-todo-selection-as-state-change nil)
