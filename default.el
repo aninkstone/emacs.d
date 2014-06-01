@@ -1,6 +1,9 @@
 ;;;; this is the emacs config file
-(load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-color-theme.el")
+(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+
+(load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
 (load-file "~/.emacs.d/addons.el/e-c++-mode.el")
@@ -22,7 +25,6 @@
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
 (load-file "~/.emacs.d/addons.el/e-anything.el")
 (load-file "~/.emacs.d/addons.el/e-org.el")
-;;(load-file "~/.emacs.d/addons.el/e-ido.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
@@ -34,10 +36,9 @@
 (load-file "~/.emacs.d/addons.el/e-google-translate.el")
 (load-file "~/.emacs.d/addons.el/e-gnus.el")
 (load-file "~/.emacs.d/addons.el/e-markdown.el")
-;;(load-file "~/.emacs.d/addons.el/e-helm.el")
 
-;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-;;(if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+;;(load-file "~/.emacs.d/addons.el/e-ido.el")
+;;(load-file "~/.emacs.d/addons.el/e-helm.el")
 ;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 ;;(if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 
