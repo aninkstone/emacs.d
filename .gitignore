@@ -2,3 +2,5 @@ semanticdb/*
 ac-comphist.dat
 bookmarks
 anything-c-adaptive-history
+cedet-bzr/lisp/*
+cedet-bzr/doc/*
