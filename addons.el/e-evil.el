@@ -119,6 +119,3 @@
 
 (load-file "~/.emacs.d/addons.el/evil-search-improve.el")
 (define-key evil-motion-state-map "*" 'evil-search-symbol-forward)
-
-;;cedet configure
-(define-key evil-motion-state-map "\\j" semantic-ia-fast-jump)
