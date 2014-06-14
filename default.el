@@ -39,8 +39,9 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-ido.el")
 ;;(load-file "~/.emacs.d/addons.el/e-helm.el")
+
 ;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
-;;(if (eq system-type 'darwin)   (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
+;;(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-nxhtml.el"))
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
