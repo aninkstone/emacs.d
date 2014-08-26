@@ -43,3 +43,6 @@
 [submodule "addons.gt/evil-matchit"]
 	path = addons.gt/evil-matchit
 	url = https://github.com/redguardtoo/evil-matchit.git
+[submodule "addons.gt/replace-color-themes"]
+	path = addons.gt/replace-color-themes
+	url = https://github.com/emacs-jp/replace-colorthemes.git

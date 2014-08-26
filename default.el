@@ -45,7 +45,7 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
+;;(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
 
 ;;set fullscreen
 ;;(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
