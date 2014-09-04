@@ -13,7 +13,7 @@
 
 (setq-mode-local c-mode semanticdb-find-default-throttle '(project unloaded system recursive))
 
-(global-ede-mode 1)
+;;(global-ede-mode 1)
 
 ;;(defun my-cedet-hook ()
 ;;  (local-set-key [(control return)] 'semantic-ia-complete-symbol)

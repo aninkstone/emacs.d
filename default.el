@@ -23,7 +23,7 @@
 (load-file "~/.emacs.d/addons.el/e-package.el")
 (load-file "~/.emacs.d/addons.el/e-ahs.el")
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
-(load-file "~/.emacs.d/addons.el/e-anything.el")
+;;(load-file "~/.emacs.d/addons.el/e-anything.el")
 (load-file "~/.emacs.d/addons.el/e-org.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
@@ -53,7 +53,7 @@
 ;;remap M-x
 (define-key global-map (kbd "\C-\\ \C-\\") 'execute-extended-command)
 (define-key global-map (kbd "\C-\\ r") 'rgrep)
-(global-set-key (kbd "C-;") ctl-x-map)
+;;(global-set-key (kbd "C-;") ctl-x-map)
 
 ;;(put 'dired-find-alternate-file 'disabled nil)
 
@@ -81,7 +81,7 @@
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
 
-;;(load-file "~/.emacs.d/addons.el/e-w3m.el")
+(load-file "~/.emacs.d/addons.el/e-w3m.el")
 
 ;;; Set up the auto-mode associations: -------------------------------
 ;;--------------------------------------------------------------------
