@@ -2,7 +2,7 @@
 (load-file "~/.emacs.d/cedet-bzr/cedet-devel-load.el")
 
 (require 'semantic/ia)
-(require 'semantic/bovine/gcc)
+;;(require 'semantic/bovine/gcc)
 (require 'semantic/db)
 
 (require 'semantic/tag)
@@ -49,17 +49,17 @@
 ;;;;(semantic-mode 1)
 ;;
 (setq semantic-default-submodes '(global-semantic-highlight-edits-mode
-                                  global-semantic-idle-scheduler-mode
-                                  global-semantic-idle-breadcrumbs-mode
-                                  global-semantic-idle-completions-mode
+                                  ;;global-semantic-idle-scheduler-mode
+                                  ;;global-semantic-idle-breadcrumbs-mode
+                                  ;;global-semantic-idle-completions-mode
                                   ;;global-semantic-highlight-func-mode
                                   ;;global-semantic-idle-local-symbol-highlight-mode
                                   ;;global-semantic-idle-summary-mode
                                   ;;global-semantic-mru-bookmark-mode
-                                  global-semantic-show-parser-state-mode
-                                  global-semantic-show-unmatched-syntax-mode
-                                  global-semantic-stickyfunc-mode
-                                  global-semanticdb-minor-mode
+                                  ;;global-semantic-show-parser-state-mode
+                                  ;;global-semantic-show-unmatched-syntax-mode
+                                  ;;global-semantic-stickyfunc-mode
+                                  ;;global-semanticdb-minor-mode
                                   global-semantic-decoration-mode))
 
 

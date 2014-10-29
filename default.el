@@ -1,5 +1,6 @@
 ;;;; this is the emacs config file
-(load-file "~/.emacs.d/addons.el/e-color-theme.el")
+;;;
+(if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
 (if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 (if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 (if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
@@ -46,7 +47,8 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-;;(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el"))
+(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
+(if (eq system-type 'windows-nt)(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el")))
 
 ;;set fullscreen
 ;;(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
@@ -82,7 +84,7 @@
     (setq PATH (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
     (setq exec-path (append exec-path '("/usr/local/bin"))))
 
-(load-file "~/.emacs.d/addons.el/e-w3m.el")
+;;(load-file "~/.emacs.d/addons.el/e-w3m.el")
 
 ;;; Set up the auto-mode associations: -------------------------------
 ;;--------------------------------------------------------------------
