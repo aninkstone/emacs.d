@@ -1,5 +1,6 @@
 ;;;; this is the emacs config file
-(load-file "~/.emacs.d/addons.el/e-color-theme.el")
+;;;
+(if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
 (if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 (if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
 (if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
