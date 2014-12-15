@@ -38,6 +38,7 @@
 (load-file "~/.emacs.d/addons.el/e-gnus.el")
 (load-file "~/.emacs.d/addons.el/e-markdown.el")
 (load-file "~/.emacs.d/addons.el/e-httpd.el")
+(load-file "~/.emacs.d/addons.el/e-eww.el")
 
 ;;(load-file "~/.emacs.d/addons.el/e-ido.el")
 ;;(load-file "~/.emacs.d/addons.el/e-helm.el")
