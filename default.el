@@ -48,7 +48,7 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
+;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
 (if (eq system-type 'windows-nt)(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el")))
 
 ;;set fullscreen
