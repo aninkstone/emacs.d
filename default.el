@@ -1,9 +1,11 @@
 ;;;; this is the emacs config file
 ;;;
 (if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
-(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
+
+;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+;;(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
+
 (load-file "~/.emacs.d/addons.el/e-evil.el")
 (load-file "~/.emacs.d/addons.el/e-cl-lib.el")
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
