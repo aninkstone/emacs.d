@@ -48,7 +48,7 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
+(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
 (if (eq system-type 'windows-nt)(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el")))
 
 ;;set fullscreen
@@ -148,7 +148,7 @@
 ;;auto reload if file modified by other editor
 ;;(global-auto-revert-mode t)
 
-(setq user-full-name "D")
+(setq user-full-name "Daniel C")
 
 ;;right-only
 ;;(set-fringe-mode '(0 . 1))
