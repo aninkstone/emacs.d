@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/org-mode/lisp")
 (require 'ox)
 (require 'ob)
+(require 'ob-table)
 (require 'org)
 
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))

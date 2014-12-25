@@ -14,3 +14,5 @@
   (make-local-variable 'gcs-shr-width)
   (setq gcs-shr-width (- gcs-shr-width 10))
   (eww-reload))
+
+(setq eww-search-words "http://www.google.com.hk/search?q=")

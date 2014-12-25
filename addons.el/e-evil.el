@@ -73,6 +73,11 @@
   "k" 'cscope-prev-file
   )
 
+(evil-add-hjkl-bindings neotree-mode 'emacs
+  "j" 'cscope-next-file
+  "k" 'cscope-prev-file
+  )
+
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
   "K" 'magit-discard-item
   "L" 'magit-key-mode-popup-logging

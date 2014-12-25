@@ -35,6 +35,7 @@
 (load-file "~/.emacs.d/addons.el/e-markdown.el")
 (load-file "~/.emacs.d/addons.el/e-httpd.el")
 (load-file "~/.emacs.d/addons.el/e-eww.el")
+(load-file "~/.emacs.d/addons.el/e-neotree.el")
 
 ;;speedbar.el does not work on emacs 25
 ;;(load-file "~/.emacs.d/addons.el/e-sr-speedbar.el")

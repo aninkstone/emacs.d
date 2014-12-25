@@ -46,3 +46,6 @@
 [submodule "addons.gt/replace-color-themes"]
 	path = addons.gt/replace-color-themes
 	url = https://github.com/emacs-jp/replace-colorthemes.git
+[submodule "addons.gt/neotree"]
+	path = addons.gt/neotree
+	url = https://github.com/jaypei/emacs-neotree.git
