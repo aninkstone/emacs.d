@@ -70,13 +70,7 @@
 
 (evil-add-hjkl-bindings cscope-list-entry-keymap 'emacs
   "j" 'cscope-next-file
-  "k" 'cscope-prev-file
-  )
-
-(evil-add-hjkl-bindings neotree-mode 'emacs
-  "j" 'cscope-next-file
-  "k" 'cscope-prev-file
-  )
+  "k" 'cscope-prev-file)
 
 (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
   "K" 'magit-discard-item
@@ -124,3 +118,4 @@
 
 (load-file "~/.emacs.d/addons.el/evil-search-improve.el")
 (define-key evil-motion-state-map "*" 'evil-search-symbol-forward)
+
