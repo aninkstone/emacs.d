@@ -2,10 +2,26 @@
 ;;;
 (if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
 
-;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-;;(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
-;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
-
+(load-file "~/.emacs.d/addons.el/e-evil.el")
+(load-file "~/.emacs.d/addons.el/e-cl-lib.el")
+(load-file "~/.emacs.d/addons.el/e-auto-complete.el")
+(load-file "~/.emacs.d/addons.el/e-c++-mode.el")
+(load-file "~/.emacs.d/addons.el/e-bs.el")
+(load-file "~/.emacs.d/addons.el/e-diminish.el")
+(load-file "~/.emacs.d/addons.el/e-cscope.el")
+(load-file "~/.emacs.d/addons.el/e-fff.el")
+(load-file "~/.emacs.d/addons.el/e-goto-last-change.el")
+(load-file "~/.emacs.d/addons.el/e-highlight-symbol.el")
+(load-file "~/.emacs.d/addons.el/e-iswitchb.el")
+(load-file "~/.emacs.d/addons.el/e-jabber.el")
+(load-file "~/.emacs.d/addons.el/e-magit.el")
+(load-file "~/.emacs.d/addons.el/e-mcomplete.el")
+(load-file "~/.emacs.d/addons.el/e-shell.el")
+(load-file "~/.emacs.d/addons.el/e-undo-tree.el")
+(load-file "~/.emacs.d/addons.el/e-package.el")
+(load-file "~/.emacs.d/addons.el/e-ahs.el")
+(load-file "~/.emacs.d/addons.el/e-filecache.el")
+(load-file "~/.emacs.d/addons.el/e-org.el")
 (load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
 (load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
@@ -20,9 +36,14 @@
 (load-file "~/.emacs.d/addons.el/e-httpd.el")
 (load-file "~/.emacs.d/addons.el/e-eww.el")
 (load-file "~/.emacs.d/addons.el/e-neotree.el")
+(load-file "~/.emacs.d/addons.el/e-golden-ratio.el")
 
 ;;speedbar.el does not work on emacs 25
 ;;(load-file "~/.emacs.d/addons.el/e-sr-speedbar.el")
+
+;;(if (eq system-type 'gnu/linux) (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+;;(if (eq system-type 'darwin)    (load-file "~/.emacs.d/addons.el/e-cedet.el"))
+;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-cedet.el"))
 
 ;;(load-file "~/.emacs.d/addons.el/e-anything.el")
 ;;(load-file "~/.emacs.d/addons.el/e-ido.el")
