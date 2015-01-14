@@ -1,11 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/addons.gt/package.el")
 (require 'package)
 
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;; and the old elpa repo
-(add-to-list 'package-archives '("elpa-old" . "http://tromey.com/elpa/"))
+;;(add-to-list 'package-archives '("elpa-old" . "http://tromey.com/elpa/"))
 ;; and automatically parsed versiontracking repositories.
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 
 ;; Make sure a package is installed
