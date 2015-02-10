@@ -1,3 +1,4 @@
+
 ;;;; this is the emacs config file
 ;;;
 (if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))

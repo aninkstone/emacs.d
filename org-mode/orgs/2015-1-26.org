@@ -1,0 +1,96 @@
+#+STARTUP: showall
+#+STARTUP: hidestars
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="template/css/org.css"/>
+
+#+SETUPFILE: ../orgcss/level-0.orgcss
+
+
+* 周会
+** <2015-01-26 周一>
+   #+ATTR_HTML: border="2" rules="all" frame="border" align="left"
+   | 人员   | 上周工作      | 本周工作 | 备注 | useless |
+   |--------+---------------+----------+------+---------|
+   | 陈作鹏 | 15RC代码Merge | nohting  | ss   | dda     |
+   |        |               |          |      |         |
+   
+
+** Test
+   #+ATTR_HTML: border="2" rules="all" frame="border"
+   | Value | LastWeek               | This Week | Comment |   |
+   |-------+------------------------+-----------+---------+---|
+   | Chen  | 15RC source code Merge |           |         |   |
+
+** Test Test
+   #+BEGIN_SRC emacs-lisp
+       (defun org-xor (a b)
+          "Exclusive or."
+          (if a (not b) b))
+   #+END_SRC
+** Test Test
+** Test Test
+** Test Test
+** Test Test
+   #+BEGIN_SRC C
+   #include	"drv_hardware.h"
+   #include	"drv_intevt.h"  // all int number for drives
+   #include	"iic_drv.h"
+   #include	"iic_drv_local.h" // iic information define 
+
+   #ifdef USER_ASSERT_ON
+   #include	<assert.h>
+   extern void abort(void);
+   #endif
+
+   /********************** local variable *****************************/
+   static	volatile	B	*tIIC_reg[ IIC_CH_MAX ][ 9 ];			//
+   #ifndef NDEBUG
+   T_IIC_MEM		*IIC_obj = NULL;
+   #else	//NDEBUG
+   static	T_IIC_MEM	*IIC_obj = NULL;							//
+   #endif	//NDEBUG
+   
+   #ifdef USER_MEM_POOL					//
+   static  ID  mpfid;						//
+   #else									//
+   #ifdef USER_MEM_STATIC				//
+   static  T_IIC_MEM	gIIC_obj;	//
+   #endif								//
+   #endif
+   
+   /******************** table define *********************************/
+   static const T_CFLG gIIC_wflg = { TA_TFIFO | TA_WSGL | TA_CLR, 0};	// event flag
+   
+   static const UW NACKI_NUM[]   ={ IIC_INT_NUM_NAKI0, IIC_INT_NUM_NAKI1 ,IIC_INT_NUM_NAKI2,IIC_INT_NUM_NAKI3};//  number of nack interrupter channel 0 to channel 3
+   static const UW STPI_NUM[] ={ IIC_INT_NUM_STPI0, IIC_INT_NUM_STPI1,IIC_INT_NUM_STPI2,IIC_INT_NUM_STPI3 };//  number of transfer stop interrupter channel 0 to channel 3
+   static const UW RXI_NUM[] ={ IIC_INT_NUM_RXI0, IIC_INT_NUM_RXI1 ,IIC_INT_NUM_RXI2 , IIC_INT_NUM_RXI3};//  number of receive interrupter channel 0 to channel 3
+   static const UW TXI_NUM[]  ={ IIC_INT_NUM_TXI0, IIC_INT_NUM_TXI1 ,IIC_INT_NUM_TXI2,IIC_INT_NUM_TXI3 };//  number of transfer interrupter channel 0 to channel 3
+   static const UW TEI_NUM[] ={IIC_INT_NUM_TEI0 , IIC_INT_NUM_TEI1 ,IIC_INT_NUM_TEI2,IIC_INT_NUM_TEI3};//  number of transfer end interrupter channel 0 to channel 3
+   static const FP NACKI_FUN[]	 ={ NACKI0, NACKI1,NACKI2,NACKI3 };  //   no ack interrupter function inport
+   static const FP STPI_FUN[]  ={ STPI0, STPI1,STPI2,STPI3 };//   stop signal recognise interrupter function inport
+   static const FP RXI_FUN[]  ={ RXI0, RXI1,RXI2,RXI3 };  //  receive interrupter function inport
+   static const FP TXI_FUN[]   ={ TXI0,TXI1,TXI2,TXI3 };  //  transfer interrupter 
+   static const FP TEI_FUN[]   ={TEI0,TEI1,TEI2,TEI3};   // transfer end interrupter 
+   
+   static const T_IIC_DRIVER_FUNCS driver_funcs = { // functions for driver
+   {IIC_FAMILY_DRV, (0x1<<16 | 0x01), (0x1<<16 | 0x01), 0},
+   drv_IIC_Pmoperation,
+   drv_IIC_Init,
+   drv_IIC_Quit,
+   drv_IIC_Open,
+   drv_IIC_Close,
+   drv_IIC_Status,
+   drv_IIC_WriteAsync,
+   drv_IIC_ReadAsync,
+   drv_IIC_Abort,
+   drv_IIC_WriteRead
+   };
+   #+END_SRC
+** My Table 
+   #+ATTR_HTML: border="2" rules="all" frame="border"
+   | column 1 | column 2 | column 3 |
+   |        a |        b |        c |
+   |      1.4 |      2.5 |      3.6 |
+   |      1.4 |      2.5 |      3.6 |
