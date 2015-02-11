@@ -109,17 +109,17 @@
          :publishing-function org-html-publish-to-html
          :headline-levels 4          ; Just the default for this project.
          :auto-preamble nil          ; Disable auto preamble 
-         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"\#\">Daniel C</a><ul class=\"nav\"><li><a href=\"../index.html\">About Me</a></li><li class=\"active\"><a href=\"academic.html\">Academic</a></li><li><a href=\"../contact/contact.html\">Contact</a></li></ul> </div></div>"
-         :auto-sitemap t                  ; Generate sitemap.org automagically...
-         :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
-         :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
+         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">稻草人</a><ul class=\"nav\"><li><a href=\"index.html\">主页</a></li><li><a href=\"aboutme.html\">关于</a></li></ul></div></div>"
+         :auto-sitemap nil                  ; Generate sitemap.org automagically...
+         :sitemap-filename "sitemap.org"    ; call it sitemap.org (it's the default)...
+         :sitemap-title "Sitemap"           ; with title 'Sitemap'.
          :export-creator-info nil    ; Disable the inclusion of "Created by Org" in the postamble.
          :export-author-info nil     ; Disable the inclusion of "Author: Your Name" in the postamble.
          :auto-postamble nil         ; Disable auto postamble 
          :table-of-contents t        ; Set this to "t" if you want a table of contents, set to "nil" disables TOC.
          :section-numbers nil        ; Set this to "t" if you want headings to have numbers.
-         :html-postamble "    <p class=\"postamble\">Last Updated %d.</p> " ; your personal postamble
-         :style-include-default nil  ;Disable the default css style
+         :html-postamble ""          ; your personal postamble
+         :style-include-default nil  ; Disable the default css style
          )
 
         ("org-static"                ;Used to publish static files

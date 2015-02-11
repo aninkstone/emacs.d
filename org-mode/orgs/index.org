@@ -1,1 +1,18 @@
-[[file:2015-1-26.org][test]]
+#+STARTUP: showall
+#+STARTUP: hidestars
+#+HTML: <script src="template/js/jquery-1.11.2.min.js"></script>
+#+HTML: <script src="template/js/org-emitx.js"></script>
+#+HTML: <script src="bootstrap/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="template/css/org.css"/>
+
+* 任务
+*** TODO 删掉测试章节
+*** TODO 写一个博文说明如何用emacs生成这个网站
+
+* 博文一览
+** [[file:test.org][测试]]
+    测试这个网站用（要删掉）
+** [[file:test.org][如何制作这个网站 emacs org-mode]]
+
