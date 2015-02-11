@@ -1,0 +1,55 @@
+#+STARTUP: showall
+#+STARTUP: hidestars
+
+#+HTML: <script src="template/js/jquery-1.11.2.min.js"></script>
+#+HTML: <script src="template/js/org-emitx.js"></script>
+#+HTML: <script src="bootstrap/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="template/css/org.css"/>
+#+SETUPFILE: ../orgcss/level-0.orgcss
+#+STARTUP: odd
+
+* 16LOW Tasks
+#+CATEGORY: 16LOW
+**** TODO 设计依赖(TestMode)
+   :PROP
+   :文档依赖/][式样变更]]
+   :END:
+*** TODO StatusMgr SYS->SOC通信式样变更对应        :邹小刚:
+*** TODO TestMode对应                              :懂建巍:
+**** DONE Win32环境编译                                                 :陈作鹏:
+CLOSE 15:07] SCHEDULED: <2015-01-08 周四>
+- Staom "WAITING"    [2015-01-26 周一 15:07]
+- Staom "TODO"       [2015-01-08 周四 19:44] \\
+UI 到工程当中，要郭洪超来搞一下
+**** DONE 16LOW iDataLink没有人做                                       :陈作鹏:
+   CLOSED: [2015-01-26 周一 15:06]
+   - CLOSING NOTE [2015-01-26 周一 15:06] \\
+     张何伟担当
+**** DONE SXM没工有担当
+   CLOSED: [2015-01-21 周三 13:07]
+   - CLOSING NOTE [2015-01-21 周三 13:07] \\
+     张何伟担当
+**** TODO 15RC代码Merge到16Trunk上                                      :陈作鹏:
+   SCHEDULED: <2015-01-26 周一>
+**** TODO 15LOW ARM切替Frezz问题调查                                    :陈作鹏:
+   SCHEDULED: <2015-01-26 周一>
+**** DONE 16LOW周会                                                     :陈作鹏:
+   CLOSED: [2015-01-28 周三 15:38] SCHEDULED: <2015-01-27 周二>
+   - CLOSING NOTE [2015-01-28 周三 15:38]
+**** TODO org-mode导出到HTML                                            :陈作鹏:
+   SCHEDULED: <2015-01-27 周二>
+**** DONE 做一个内部工作进度表                                          :陈作鹏:
+   CLOSED: [2015-02-03 周二 17:21] SCHEDULED: <2015-01-27 周二>
+   - CLOSING NOTE [2015-02-03 周二 17:21]
+**** TODO 16LOW状态部和UI要多少担当                                     :陈作鹏:
+   SCHEDULED: <2015-01-29 周四>
+**** NEXT DEH招10个担当                                                 :陈作鹏:
+   SCHEDULED: <2015-01-31 周六>
+**** TODO 16LOW软件基本设计                                             :陈作鹏:
+   SCHEDULED: <2015-01-31 周六>
+**** TODO 16LOW要件次期课题Follow                                        :陈作鹏:
+**** TODO 16LOW式样依赖展开的式样书确认                                 :陈作鹏:
+   SCHEDULED: <2015-01-31 周六>
+**** 认证日程课题 14-667-5-00058                                       :NOTE:
