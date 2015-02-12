@@ -3,16 +3,18 @@
 #+HTML: <script src="template/js/jquery-1.11.2.min.js"></script>
 #+HTML: <script src="template/js/org-emitx.js"></script>
 #+HTML: <script src="bootstrap/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="template/css/org.css"/>
+#+TITLE: MainPage
+
+-----------------------------------------------------------------------------------------------------
 
 * 任务
-*** TODO 删掉测试章节
-*** TODO 写一个博文说明如何用emacs生成这个网站
+** TODO 删掉测试章节
+** TODO 写一个博文说明如何用emacs生成这个网站
 
 * 博文一览
 ** [[file:test.org][测试]]
-    测试这个网站用（要删掉）
-** [[file:test.org][如何制作这个网站 emacs org-mode]]
-
+   测试这个网站用（要删掉）
+** [[file:%E5%A6%82%E4%BD%95%E7%94%A8Emacs%E5%88%B6%E4%BD%9C%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99.org][如何用Emacs制作这个网站]]
