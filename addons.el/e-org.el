@@ -19,7 +19,7 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+      (quote ((sequence "TODO(t)" "NEXT(n)" "NOTE(o)" "|" "DONE(d)")
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" ))))
 
 (setq org-todo-keyword-faces
@@ -28,6 +28,7 @@
               ("DONE" :foreground "forest green" :weight bold)
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
+              ("NOTE" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "forest green" :weight bold))))
 
 ;;Fast Todo Selection
@@ -36,6 +37,7 @@
 
 (setq org-todo-state-tags-triggers
       (quote (("CANCELLED" ("CANCELLED" . t))
+              ("WAITING" ("WAITING" . t))
               ("WAITING" ("WAITING" . t))
               ("HOLD" ("WAITING" . t) ("HOLD" . t))
               (done ("WAITING") ("HOLD"))
@@ -105,6 +107,26 @@
          :base-directory "~/.emacs.d/org-mode/orgs/"                  ;directory holds .org files 
          :base-extension "org"                                        ;process .org file only    
          :publishing-directory "~/.emacs.d/org-mode/publish-html/"            ;export destination
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 6          ; Just the default for this project.
+         :auto-preamble nil          ; Disable auto preamble 
+         :html-preamble "<div class=\"navbar navbar-inverse navbar-fixed-top\"><div class=\"navbar-inner\"><a class=\"brand\" href=\"index.html\">稻草人</a><ul class=\"nav\"><li><a href=\"index.html\">主页</a></li><li><a href=\"aboutme.html\">关于</a></li></ul></div></div>"
+         :auto-sitemap nil                  ; Generate sitemap.org automagically...
+         :sitemap-filename "sitemap.org"    ; call it sitemap.org (it's the default)...
+         :sitemap-title "Sitemap"           ; with title 'Sitemap'.
+         :export-creator-info nil    ; Disable the inclusion of "Created by Org" in the postamble.
+         :export-author-info nil     ; Disable the inclusion of "Author: Your Name" in the postamble.
+         :auto-postamble nil         ; Disable auto postamble 
+         :table-of-contents nil      ; Set this to "t" if you want a table of contents, set to "nil" disables TOC.
+         :section-numbers t          ; Set this to "t" if you want headings to have numbers.
+         :html-postamble ""          ; your personal postamble
+         :style-include-default nil  ; Disable the default css style
+         )
+        ("org-emitX"                                                  ;Used to export .org file
+         :base-directory "d:/Gits/emitX/doc/"                         ;directory holds .org files 
+         :base-extension "org"                                        ;process .org file only    
+         :publishing-directory "d:/Gits/emitX/doc/publish-html/"            ;export destination
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6          ; Just the default for this project.
