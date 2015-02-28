@@ -1,4 +1,3 @@
-
 ;;;; this is the emacs config file
 ;;;
 (if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
@@ -179,3 +178,7 @@
     (fundamental-mode)))
 
 (add-hook 'find-file-hooks 'my-find-file-check-make-large-file-read-only-hook)
+
+;;force vertical split
+(setq split-height-threshold 0)
+(setq split-width-threshold nil)
