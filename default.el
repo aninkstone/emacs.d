@@ -7,8 +7,6 @@
 (load-file "~/.emacs.d/addons.el/e-auto-complete.el")
 (load-file "~/.emacs.d/addons.el/e-c++-mode.el")
 (load-file "~/.emacs.d/addons.el/e-bs.el")
-(load-file "~/.emacs.d/addons.el/e-diminish.el")
-(load-file "~/.emacs.d/addons.el/e-cscope.el")
 (load-file "~/.emacs.d/addons.el/e-fff.el")
 (load-file "~/.emacs.d/addons.el/e-goto-last-change.el")
 (load-file "~/.emacs.d/addons.el/e-highlight-symbol.el")
@@ -18,25 +16,29 @@
 (load-file "~/.emacs.d/addons.el/e-mcomplete.el")
 (load-file "~/.emacs.d/addons.el/e-shell.el")
 (load-file "~/.emacs.d/addons.el/e-undo-tree.el")
-(load-file "~/.emacs.d/addons.el/e-package.el")
 (load-file "~/.emacs.d/addons.el/e-ahs.el")
 (load-file "~/.emacs.d/addons.el/e-filecache.el")
 (load-file "~/.emacs.d/addons.el/e-org.el")
-(load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
 (load-file "~/.emacs.d/addons.el/e-emms.el")
-(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 (load-file "~/.emacs.d/addons.el/e-yasnippet.el")
 (load-file "~/.emacs.d/addons.el/e-wubi.el")
 (load-file "~/.emacs.d/addons.el/e-etags.el")
 (load-file "~/.emacs.d/addons.el/e-dired.el")
 (load-file "~/.emacs.d/addons.el/e-el-get.el")
 (load-file "~/.emacs.d/addons.el/e-google-translate.el")
-(load-file "~/.emacs.d/addons.el/e-gnus.el")
-(load-file "~/.emacs.d/addons.el/e-markdown.el")
-(load-file "~/.emacs.d/addons.el/e-httpd.el")
 (load-file "~/.emacs.d/addons.el/e-eww.el")
-(load-file "~/.emacs.d/addons.el/e-neotree.el")
-(load-file "~/.emacs.d/addons.el/e-golden-ratio.el")
+(load-file "~/.emacs.d/addons.el/e-cscope.el")
+
+;;(load-file "~/.emacs.d/addons.el/e-multi-web-mode.el")
+
+;;(load-file "~/.emacs.d/addons.el/e-markdown.el")
+;;(load-file "~/.emacs.d/addons.el/e-golden-ratio.el")
+;;(load-file "~/.emacs.d/addons.el/e-gnus.el")
+;;(load-file "~/.emacs.d/addons.el/e-httpd.el")
+;;(load-file "~/.emacs.d/addons.el/e-neotree.el")
+;;(load-file "~/.emacs.d/addons.el/e-diminish.el")
+;;(load-file "~/.emacs.d/addons.el/e-package.el")
+;;(load-file "~/.emacs.d/addons.el/e-smooth-scroll.el")
 
 ;;speedbar.el does not work on emacs 25
 ;;(load-file "~/.emacs.d/addons.el/e-sr-speedbar.el")
@@ -54,8 +56,8 @@
 
 ;;(load-file "~/.emacs.d/addons.el/e-appengine.el")
 
-(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
-(if (eq system-type 'windows-nt)(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el")))
+;;(if (eq system-type 'windows-nt)(load-file "~/.emacs.d/addons.el/e-w32-browser.el"))
+;;(if (eq system-type 'windows-nt)(if (display-graphic-p) (load-file "~/.emacs.d/addons.el/e-dired+.el")))
 
 ;;set fullscreen
 ;;(if (eq system-type 'darwin)   (set-frame-parameter nil 'fullscreen 'fullboth))
