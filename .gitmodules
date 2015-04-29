@@ -10,9 +10,6 @@
 [submodule "addons.gt/color-theme-tangotango"]
 	path = addons.gt/color-theme-tangotango
     url = https://github.com/thatways/color-theme-tangotango.git
-[submodule "addons.gt/cl-lib"]
-	path = addons.gt/cl-lib
-	url = https://github.com/emacsmirror/cl-lib.git
 [submodule "addons.gt/org-mode"]
 	path = addons.gt/org-mode
 	url = git://orgmode.org/org-mode.git
