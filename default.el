@@ -1,19 +1,29 @@
 ;;;; this is the emacs config file
 
+
+(add-to-list 'load-path "~/.emacs.d/elisp/package")
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
 ;;(if (display-graphic-p)(load-file "~/.emacs.d/addons.el/e-color-theme.el"))
-(add-to-list 'load-path "~/.emacs.d/elisp/lyro-evil-e5588e50c0e4")
+(add-to-list 'load-path "~/.emacs.d/elpa/evil-20150818.1313")
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode 1)
 
-(add-to-list 'load-path "~/.emacs.d/elisp/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20150618.1949")
 (require 'auto-complete)
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete-1.3.1/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20150618.1949/dict")
 (ac-config-default)
+
+(add-to-list 'load-path "~/.emacs.d/elpa/elap/magit-20150826.1244")
+(require 'magit)
 
 (define-prefix-command 'master-sense-map)
 (global-set-key (kbd "C-\\") 'master-sense-map)
 (define-key master-sense-map (kbd "C-\\") 'execute-extended-command)
+(define-key master-sense-map (kbd "r") 'rgrep)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -41,6 +51,7 @@
 
 ;;; Set up the auto-mode associations: -------------------------------
 ;;--------------------------------------------------------------------
+
 (setq auto-mode-alist
    (append
     '(("\\.cc$"   	           . c++-mode)
