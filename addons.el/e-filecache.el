@@ -1,2 +1,0 @@
-;;enable filecache
-(require 'filecache)
